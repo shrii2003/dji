@@ -1,0 +1,1502 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Shri Store</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #F0F1F2;
+    }
+
+    .txt-custom {
+        color: #6A6A6A;
+    }
+
+    .txt-custom:hover {
+        color: #000;
+    }
+
+
+    .p-name {
+        font-size: 13px;
+    }
+
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 2%;
+    }
+
+    .carousel-control-next-icon:hover {
+        background-color: black;
+        opacity: .3;
+        padding: 40px 22px;
+        border-radius: 5px;
+
+    }
+
+    .carousel-control-prev-icon:hover {
+        background-color: black;
+        opacity: .3;
+        padding: 40px 22px;
+        border-radius: 5px;
+
+    }
+
+    .underline {
+        text-decoration: none;
+    }
+
+    .underline:hover {
+        text-decoration: underline;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        right: 15%;
+        bottom: 7rem;
+        left: 20%;
+    }
+
+
+    @media (max-width: 576px) {
+        .carousel-caption {
+            position: absolute;
+            right: 15%;
+            left: 15%;
+            bottom: 1rem;
+        }
+    }
+
+
+    .ctitle {
+        font-size: 40px;
+    }
+
+    @media (max-width: 576px) {
+        .ctitle {
+            font-size: 20px;
+        }
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 8px;
+        height: 8px;
+    }
+
+    .carousel-indicators .active {
+        background-color: #000;
+    }
+
+
+    button.indi {
+        border-radius: 50%;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    @media (max-width: 576px) {
+        .title {
+            font-size: 14px;
+        }
+    }
+
+    .navbar-toggler {
+        border: 0
+    }
+
+    .new {
+        color: #FA8C16;
+        font-size: 14px;
+    }
+
+    .card-title {
+        font-size: 28px;
+        color: #3b3e40;
+    }
+
+    .card-text {
+        font-size: 12px;
+        color: #3b3e40;
+    }
+
+    .details {
+        font-size: 14px;
+        color: #3b3e40;
+    }
+
+    .price {
+        font-size: 16px;
+        color: #3b3e40;
+    }
+
+    .card {
+        border: 0;
+        --bs-card-inner-border-radius: 0;
+    }
+
+    .outer {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .outer img,
+    .inner img {
+        width: 100%;
+        transition: all 0.9s ease;
+    }
+
+    .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+
+    }
+
+    .inner p {
+        position: relative;
+        bottom: 100px;
+        font-size: 14px;
+        color: white;
+        background-color: rgb(0, 0, 0, 0.3);
+        text-align: center;
+        padding: 8px 8px;
+        font-weight: 600;
+    }
+
+    .outer:hover .inner {
+        display: block;
+
+    }
+
+    @media (max-width: 576px) {
+        .outer:hover .inner {
+            display: none;
+
+        }
+    }
+
+    .card:hover {
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, .1);
+    }
+
+    h5 {
+        color: #3b3e40;
+        font-size: 32px;
+    }
+
+    .coin {
+        font-size: 24px;
+    }
+
+    @media (max-width: 576px) {
+        .coin {
+            font-size: 18px;
+        }
+    }
+
+    video {
+        position: relative;
+        right: 22px;
+    }
+
+    .cut {
+        color: #9FA3A6;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            width: 1200px;
+        }
+    }
+
+    .bigc {
+        font-size: 24px;
+    }
+
+    .fa-angle-right {
+        font-size: 13px;
+    }
+
+    .bg-foot {
+        background-color: #fff;
+    }
+
+    .ul-custom li {
+        margin-bottom: 1rem;
+        font-size: 12px;
+    }
+
+    .ul-custom li a {
+        color: #6c7073;
+        margin-bottom: 1rem;
+        font-size: 12px;
+    }
+
+    .ul-custom li a:hover {
+        color: #44A8F2;
+    }
+
+    .end {
+        margin-top: 32px;
+    }
+
+    .ebtn {
+        background-color: #6C7073;
+        border: none;
+        padding: 4px 4px;
+    }
+
+    .email {
+        background: transparent;
+        border: 1px solid #494B4D;
+        font-size: 14px;
+        height: 32px;
+        width: 189px;
+        padding-left: 10px;
+    }
+
+    .foot-ul {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .foot-li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .foot-ul li a {
+        color: #6c7073;
+        font-size: 12px;
+    }
+
+    .foot-ul li a:hover {
+        color: #44A8F2;
+    }
+
+    .social a {
+        color: #6c7073;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .social a:hover {
+        color: #44A8F2;
+    }
+
+    .list-inline li a {
+        color: #6c7073;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .list-inline li a:hover {
+        color: #44A8F2;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+    .cstm {
+        color: #6c7073;
+    }
+
+    .icon {
+        background-color: transparent;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        border: none;
+    }
+
+    .icon:hover {
+        background-color: #e8e7e7;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn-transparent {
+        background-color: transparent;
+        border: 0;
+    }
+
+    .btn-transparent:hover {
+        border-radius: 0;
+        border-bottom: 2px solid black;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        --bs-dropdown-min-width: 5rem;
+        font-size: 15px;
+    }
+</style>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand-lg bg-white border-bottom">
+            <div class="container">
+                <button class="navbar-toggler me-4" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasTop" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="offcanvasTop">
+                    <span><span><i class="fa-solid fa-bars text-black"></i></span></span>
+                </button>
+                <a class="navbar-brand ms-5 ms-md-0" href="#">
+                    <picture>
+                        <source srcset="images/storem.png" media="(max-width: 576px)">
+                        <img src="images/store.png" alt="...">
+                    </picture>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-4 mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="camera.html" class="text-decoration-none"><button
+                                    class="btn-transparent nav-link text-black" href="#">Camera
+                                    Drones</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="handheld.html" class="text-decoration-none"><button
+                                    class="btn-transparent nav-link text-black ms-3" href="#">Handheld</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-transparent nav-link  text-black ms-3" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Specialized
+                                </button>
+                                <ul class="dropdown-menu mt-2">
+                                    <li><a class="dropdown-item" href="#">Enterprise</a></li>
+                                    <li><a class="dropdown-item" href="#">Agriculture</a></li>
+                                    <li><a class="dropdown-item" href="#">Shri Automotive</a></li>
+                                    <li><a class="dropdown-item" href="#">Education</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-transparent nav-link  text-black ms-3" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Explore
+                                </button>
+                                <ul class="dropdown-menu mt-2">
+                                    <li><a class="dropdown-item" href="#">Sky Pixel</a></li>
+                                    <li><a class="dropdown-item" href="#">Shri Forum</a></li>
+                                    <li><a class="dropdown-item" href="#">Newsroom</a></li>
+                                    <li><a class="dropdown-item" href="#">Buying Guides</a></li>
+                                    <li><a class="dropdown-item" href="#">Events</a></li>
+                                    <li><a class="dropdown-item" href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn-transparent nav-link  text-black ms-3" href="#">Support</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cold ms-auto ms-md-none">
+                    <button class="icon me-0 me-md-2"><i class="bi bi-search fs-5"></i></button>
+                </div>
+                <div class="cold">
+                    <button class="icon me-2"><i class="bi bi-cart3 fs-5"></i></button>
+                </div>
+
+                <div class="cold me-0 d-none d-md-block">
+                    <button class="icon" data-bs-toggle="modal" data-bs-target="#modalSignin"><i
+                            class="bi bi-person fs-5"></i></button>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid d-none d-md-block bg-white">
+            <div class="container">
+                <div class="row text-center p-2 px-3">
+                    <div class="col"><a href="" class="text-decoration-none text-black"><img src="images/navp1.png"
+                                alt=""></a>
+                        <p class="p-name"><a href="" class="underline text-black">Shri Mavic</a></p>
+                    </div>
+                    <div class="col"><a href="" class="text-decoration-none text-black"><img src="images/navp2.png"
+                                alt="">
+                            <p class="p-name"><a href="" class="underline text-black">Shri Air</a></p>
+                    </div></a>
+                    <div class="col"><a href="" class="text-decoration-none text-black"><img src="images/navp3.png"
+                                alt="">
+                            <p class="p-name"><a href="" class="underline text-black">Shri Mini</a></p>
+                    </div></a>
+                    <div class="col"><a href="" class="text-decoration-none text-black"><img src="images/navp4.png"
+                                alt="">
+                            <p class="p-name"><a href="" class="underline text-black">Shri Avata</a></p>
+                    </div></a>
+                    <div class="col"><a href="" class="text-decoration-none text-black"><img src="images/navp5.png"
+                                alt="">
+                            <p class="p-name"><a href="" class="underline text-black">Osmo Pocket</a></p>
+                    </div></a>
+                    <div class="col"><a href="" class="text-decoration-none text-black"><img src="images/navp6.png"
+                                alt="">
+                            <p class="p-name"><a href="" class="underline text-black">Osmo Action</a></p>
+                    </div></a>
+                    <div class="col"><a href="" class="text-decoration-none text-black"><img src="images/navp7.png"
+                                alt="">
+                            <p class="p-name"><a href="" class="underline text-black">Osmo Mobile</a></p>
+                    </div></a>
+                    <div class="col"><a href="" class="text-decoration-none text-black"><img src="images/navp8.png"
+                                alt="">
+                            <p class="p-name"><a href="" class="underline text-black">Ronin Stabilizers</a>
+                            </p>
+                    </div></a>
+                    <div class="col"><a href="" class="text-decoration-none text-black"><img src="images/navp9.png"
+                                alt="">
+                            <p class="p-name"><a href="" class="underline text-black">Ronin
+                                    Cinema<br>Cameras</a></p>
+                    </div></a>
+                    <div class="col"><a href="" class="text-decoration-none text-black"><img src="images/navp10.png"
+                                alt="">
+                            <p class="p-name"><a href="" class="underline text-black">Enterprise</a></p>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="indi active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="indi"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="indi"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="indi"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <picture>
+                        <source srcset="images/storecm4.jpg" media="(max-width: 576px)">
+                        <img src="images/storec1.jpg" class="d-block w-100" alt="...">
+                    </picture>
+                    <div class="carousel-caption d-block d-md-block text-center text-md-start text-white">
+                        <h2 class="ctitle mb-1 mb-md-4">Epic Products, Epic Deals</h2>
+                        <p class="title mb-2">UP TO 30%</p>
+                        <p class="d-none d-md-block">From November 18 to November 28</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <picture>
+                        <source srcset="images/storecm1.jpg" media="(max-width: 576px)">
+                        <img src="images/storec2.jpg" class="d-block w-100" alt="...">
+                    </picture>
+                    <div class="carousel-caption d-block d-md-block text-center text-md-start text-white">
+                        <h2 class="ctitle mb-1 mb-md-4">SHRI AVATA</h2>
+                        <p class="title mb-2">Born to Fly</p>
+                        <p class="d-none d-md-block">Lightweight and Compact Drone for Safe and Immersive flight </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <picture>
+                        <source srcset="images/storecm2.jpg" media="(max-width: 576px)">
+                        <img src="images/storec3.jpg" class="d-block w-100" alt="...">
+                    </picture>
+                    <div class="carousel-caption d-block d-md-block text-center text-md-start text-white">
+                        <h2 class="ctitle mb-1 mb-md-4">OSMO ACTION 3</h2>
+                        <p class="title mb-2">Beyond The Edge</p>
+                        <p class="d-none d-md-block">Cold-Resistant and Durable Action Camera</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <picture>
+                        <source srcset="images/storecm3.jpg" media="(max-width: 576px)">
+                        <img src="images/storec4.jpg" class="d-block w-100" alt="...">
+                    </picture>
+                    <div class="carousel-caption d-block d-md-block text-center text-md-start text-white">
+                        <h2 class="ctitle mb-1 mb-md-4">OSMO MOBILE 6</h2>
+                        <p class="title mb-2">Unfold Your Creativity</p>
+                        <p class="d-none d-md-block">Intelligent 3-axis Smartphone Gimbal Stablizer</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!--Modal -->
+        <div class="modal modal-signin py-5" data-bs-keyboard="false" tabindex="-1" aria-hidden="true" id="modalSignin">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
+                        <h1 class="fw-bold mb-0 fs-2">Sign up for free</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body p-5 pt-0">
+                        <form class="">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control rounded-3" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+                            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                            <hr class="my-4">
+                            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
+                                <svg class="bi me-1" width="16" height="16">
+                                    <use xlink:href="#twitter" />
+                                </svg>
+                                Sign up with Twitter
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                                <svg class="bi me-1" width="16" height="16">
+                                    <use xlink:href="#facebook" />
+                                </svg>
+                                Sign up with Facebook
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                <svg class="bi me-1" width="16" height="16">
+                                    <use xlink:href="#github" />
+                                </svg>
+                                Sign up with GitHub
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 d-block" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="col">
+                    <div class="card" style="height: 520px;">
+                        <div class="outer">
+                            <img src="images/c1.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="images/c1hover.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-1">
+                            <p class="new mb-1">New</p>
+                            <h5 class="card-title mb-3">OSMO MOBILE 6</h5>
+                            <p class="card-text h6 mb-4">3-Axis Stabilization· Quick Launch· Portable and Foldable
+                            </p>
+                            <p class="details mb-4">Smartphone stabilizer for effortless creative shooting.
+                                Enjoy 3-axis stabilization, ActiveTrack 5.0, and a built-in
+                                extension rod.
+                            </p>
+                            <span class="price">USD &#36;159</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="height: 520px;">
+                        <div class="outer">
+                            <img src="images/c2.jpg" class="card-img-top" alt="...">
+                            <div class="inner">
+                                <img src="images/c2hover.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-1">
+                            <p class="new mb-1">New</p>
+                            <h5 class="card-title mb-3">SHRI AVATA</h5>
+                            <p class="card-text h6 mb-2 lh-base">Immersive Flight Experience· Intuitive Motion
+                                Controller·<br>
+                                4K Stabilized Video
+
+                            </p>
+                            <p class="details mb-4">Avata lets you experience immersive flight. It supports
+                                4K video, and next-level safety with its built-in
+                                propeller guard.
+
+                            </p>
+                            <span class="price">USD &#36;1,388</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="height: 520px;">
+                        <div class="outer">
+                            <img src="images/c3.jpg" class="card-img-top" alt="...">
+                            <div class="inner">
+                                <img src="images/c3hover.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-1">
+                            <p class="new mb-1">New</p>
+                            <h5 class="card-title mb-3">OSMO ACTION 3</h5>
+                            <p class="card-text h6 mb-3 lh-base">4K/120fps & Super-Wide FOV· HorizonSteady·<br>
+                                Cold Resistant & Long-Lasting
+
+                            </p>
+                            <p class="details mb-4">Smartphone stabilizer for effortless creative shooting.
+                                Enjoy 3-axis stabilization, ActiveTrack 5.0, and a built-in
+                                extension rod.
+                            </p>
+                            <span class="price">USD &#36;329</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-md-5 mt-4 d-block">
+            <div class="row">
+                <div class="col">
+                    <h5>Advanced Services</h5>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 mt-3" data-aos="flip-down" data-aos-duration="1000"
+                data-aos-easing="ease-in-sine">
+                <div class="col">
+                    <div class="card text-bg-dark">
+                        <img src="images/coin.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay text-center mt-2 mt-md-4">
+                            <h5 class="card-title coin"><a href=""
+                                    class="text-decoration-none coin stretched-link card-title"><b>SHRI</b></a>
+                                Credit<br>Get 1% of
+                                the total purchase value
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt-3 mt-md-0">
+                    <div class="card text-bg-dark">
+                        <img src="images/care.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay text-center mt-2 mt-md-4">
+                            <h5 class="card-title coin"><a href=""
+                                    class="text-decoration-none coin stretched-link card-title"><b>SHRI</b></a> Care
+                                Refresh+<br><b>SHRI</b> Store Exclusive |
+                                Protect Your Gear</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 d-none d-md-block">
+            <div class="row">
+                <div class="col">
+                    <h5>Camera Drones
+                    </h5>
+                </div>
+                <div class="col">
+                    <p class="fs-6 text-end me-3 mt-1"><a href="" class="text-decoration-none text-black">More<i
+                                class="fa-solid fa-angle-right ms-1"></i></a></p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col ms-2">
+                                <img src="products/p1.jpg" alt="...">
+                            </div>
+                            <div class="col">
+                                <div class="card-body mt-5 p-0">
+                                    <p class="new mb-2">New</p>
+                                    <h5 class="card-title mb-3 bigc">Shri Avata Pro-View<br>Combo</h5>
+                                    <p class="details mb-4">Avata lets you experience immersive<br> flight. It supports
+                                        4K
+                                        video, and next-<br>level safety with its built-in propeller<br>
+                                        guard.
+                                    </p>
+                                    <span class="price">USD &#36;159</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <video width="600" height="400" loop muted autoplay="autoplay">
+                        <source src="https://stormsend1.djicdn.com/uploads/3d/f81bdc7c25aa01f562f208d4a18c40c0.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-2">
+            <div class="row row-cols-2 row-cols-md-4">
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/p2j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/p2hover.jpg" alt="">
+                                <p>SHRI Mini 3 Pro is just as powerful as it is portable. Weighing less than 249 g, it
+                                    offers upgraded safety, a 1/1.3-inch
+                                    sensor, and top features.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri Mini 3 Pro</p>
+                            <span class="fs-6"><a href="mini.html"
+                                    class="stretched-link text-decoration-none text-black">USD
+                                    &#36;759</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/p3j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/p3hover.jpg" alt="">
+                                <p>Mavic 3 comes with a 4/3 CMOS Hasselblad camera and is equipped with obstacle sensing
+                                    and Advanced RTH.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri Mavic 3</p>
+                            <span class="fs-6">USD &#36;2,049</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/p4j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/p4hover.jpg" alt="">
+                                <p>With a 1-inch sensor, 5.4K video, MasterShots, and much more, SHRI Air 2S is the
+                                    ultimate all-in-one camera drone.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri Air 2S</p>
+                            <span class="fs-6">USD &#36;999</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/p5j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/p5hover.jpg" alt="">
+                                <p>Small but mighty, SHRI Mini 2 features 4K videos, 4x Zoom, and stunning panoramas,
+                                    allowing you to explore a whole new
+                                    perspective.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri Mini 2</p>
+                            <span class="fs-6">USD &#36;449</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/p6j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/p6hover.jpg" alt="">
+                                <p>Mavic Air 2 takes power and portability to the next level, offering advanced features
+                                    in a compact form factor.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Mavic Air 2</p>
+                            <span class="fs-6">USD &#36;559 <span class=" d-none d-md-block cut ms-2"><s>USD
+                                        &#36;799</s></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/p7j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/p7hover.jpg" alt="">
+                                <p>The ultra-compact SHRI Mini SE is the perfect companion for adventure. With a 30-min
+                                    flight time and easy-to-use app,
+                                    it's ideal for beginners.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri Mini SE</p>
+                            <span class="fs-6">USD &#36;299</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/p8j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/p8hover.jpg" alt="">
+                                <p>SHRI FPV turns your aerial imagination into reality. With this immersive, intuitive,
+                                    and ready-to-fly FPV system, get
+                                    ready to go into the beyond.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri FPV Combo</p>
+                            <span class="fs-6">USD &#36;999</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/p9j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/p9hover.jpg" alt="">
+                                <p>1-inch 20MP Exmor R CMOS sensor, longer flight time and smarter features.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Phantom 4 Pro V2.0</p>
+                            <span class="fs-6">USD &#36;1,599</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 d-none d-md-block">
+            <div class="row">
+                <div class="col">
+                    <h5>Handheld</h5>
+                </div>
+                <div class="col">
+                    <p class="fs-6 text-end me-3 mt-1"><a href="" class="text-decoration-none text-black">More<i
+                                class="fa-solid fa-angle-right ms-1"></i></a></p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card mb-3 ">
+                        <div class="row g-0">
+                            <div class="col ms-2">
+                                <img src="products/osmo.jpg" alt="...">
+                            </div>
+                            <div class="col me-5">
+                                <div class="card-body mt-5 p-0">
+                                    <p class="new mb-2">New</p>
+                                    <h5 class="card-title mb-3 bigc">Osmo Mobile 6</h5>
+                                    <p class="details mb-4">Smartphone stabilizer for effortless creative shooting.
+                                        Enjoy 3-axis stabilization, ActiveTrack 5.0, and a<br> built-in
+                                        extension rod.
+                                    </p>
+                                    <span class="price">USD &#36;159</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <video width="600" height="400" loop muted autoplay="autoplay">
+                        <source
+                            src="https://stormsend1.djicdn.com/uploads/video/679b7748922a4a10a507737655438b18/M255_HG306_Main_CL_5-10s_V2_1200x800.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-2">
+            <div class="row row-cols-2 row-cols-md-4">
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/o1j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/o1hover.jpg" alt="">
+                                <p>Enjoy quick switches to vertical shooting and -20° C (-4° F) cold resistance, plus a
+                                    160-min battery life and 16m
+                                    waterproof.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Osmo Action 3 Combo</p>
+                            <span class="fs-6">USD &#36;389</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/o2j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/o2hover.jpg" alt="">
+                                <p>SHRI RS 3 Pro features Extended Carbon Fiber Axis Arms, Automated Axis Locks,
+                                    Bluetooth shutter control, and much more to
+                                    deliver optimal results.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri RS 3 Pro</p>
+                            <span class="fs-6">USD &#36;869</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/o3j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/o3hover.jpg" alt="">
+                                <p>SHRI RS 3 provides a 3kg/6.6lb load capacity along with design updates like automated
+                                    axis locks and Bluetooth shutter
+                                    for efficient control.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri RS 3</p>
+                            <span class="fs-6">USD &#36;549</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/o4j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/o4hover.jpg" alt="">
+                                <p>SHRI Transmission supports a 6km/20,000ft video and audio transmission range with
+                                    ultra-low latency, advanced remote
+                                    control, and much more.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri Transmission</p>
+                            <span class="fs-6">USD &#36;2,499</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/o5j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/o5hover.jpg" alt="">
+                                <p>SHRI Action 2's innovative design inspires creative use and can magnetically switch
+                                    form to fit any scenario.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri Action 2 Dual-Screen</p>
+                            <span class="fs-6">USD &#36;359 <span class="cut ms-2"><s>USD &#36;519</s></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/o6j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/o6hover.jpg" alt="">
+                                <p>SHRI OM 5 features a foldable magnetic design along with a built-in extension rod,
+                                    ActiveTrack 4.0, and the incredible
+                                    new ShotGuides feature.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri OM 5</p>
+                            <span class="fs-6">USD &#36;129 <span class="cut ms-2"><s>USD &#36;159</s></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/o7j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/o7hover.jpg" alt="">
+                                <p>SHRI OM 4 SE is a compact smartphone stabilizer that features a magnetic
+                                    quick-release
+                                    design and tons of intelligent
+                                    features.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri OM 4 SE</p>
+                            <span class="fs-6">USD &#36;99 <span class="cut ms-2"><s>USD &#36;119</s></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/o8j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/o8hover.jpg" alt="">
+                                <p>SHRI Pocket 2 is a compact and portable 4K camera that is stabilized to capture your
+                                    moments with magic at hand.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Shri Pocket 2</p>
+                            <span class="fs-6">USD &#36;349</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 d-none d-md-block">
+            <div class="row">
+                <div class="col">
+                    <h5>Education & Industry</h5>
+                </div>
+                <div class="col">
+                    <p class="fs-6 text-end me-3 mt-1"><a href="" class="text-decoration-none text-black">More<i
+                                class="fa-solid fa-angle-right ms-1"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card mb-3 ">
+                        <div class="row g-0">
+                            <div class="col ms-2">
+                                <img src="products/edu.jpg" alt="...">
+                            </div>
+                            <div class="col me-5">
+                                <div class="card-body mt-5 p-0">
+                                    <p class="new mb-2">New</p>
+                                    <h5 class="card-title mb-3 bigc">DJI Mavic 3E Worry Free Combo</h5>
+                                    <p class="details mb-4">Equipped with a 20MP wide-angle camera with a 4/3 CMOS and a
+                                        zoom camera to deliver powerful imaging capability.
+                                    </p>
+                                    <span class="price">USD &#36;3,810</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <video width="600" height="400" loop muted autoplay="autoplay">
+                        <source
+                            src="https://stormsend1.djicdn.com/uploads/video/679b7748922a4a10a507737655438b18/M255_WM265_Intro_CL_5-10s_V2_1200x800.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-2">
+            <div class="row row-cols-2 row-cols-md-4">
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/e1j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/e1hover.jpg" alt="">
+                                <p>The Matrice 30 series integrates multiple high-performance sensors into a lightweight
+                                    and portable body.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Matrice 30T Worry</p>
+                            <span class="fs-6">USD &#36;14,700</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img src="products/e2j.jpg" class="card-img-top" alt="..." class="trans">
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Matrice 300 RTK</p>
+                            <span class="fs-6">USD &#36;13,700</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/e3j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/e3hover.jpg" alt="">
+                                <p>The Zenmuse H20N is a versatile, hybrid payload with starlight sensors and dual
+                                    thermal zoom cameras built for night
+                                    time work.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Zenmuse H20N Worry</p>
+                            <span class="fs-6">USD &#36;13,700</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/e4j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/e4hover.jpg" alt="">
+                                <p>Versatile and compact, the M2EA comes with high-resolution thermal and visual
+                                    cameras, supports up to 32× digital zoom,
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Mavic 2 Enterprise</p>
+                            <span class="fs-6">USD &#36;5,969</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img src="products/e5j.jpg" class="card-img-top" alt="..." class="trans">
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Phantom 4 RTK</p>
+                            <span class="fs-6">USD &#36;6,600</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img src="products/e6j.jpg" class="card-img-top" alt="..." class="trans">
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">RoboMaster S1</p>
+                            <span class="fs-6">USD &#36;549</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/e7j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/e7hover.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">RoboMaster TT</p>
+                            <span class="fs-6">USD &#36;239</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="outer">
+                            <img src="products/e8j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="inner">
+                                <img src="products/e8hover.png" alt="">
+                                <p>A quad-sensor solution that integrates a zoom camera, wide camera, a laser
+                                    rangefinder, and a radiometric thermal
+                                    camera.</p>
+                            </div>
+                        </div>
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-5">Zenmuse H20T</p>
+                            <span class="fs-6">USD &#36;12,200</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-md-5 mt-3 d-block">
+            <div class="row">
+                <div class="col">
+                    <h5>Service
+                    </h5>
+                </div>
+                <div class="col">
+                    <p class="fs-6 text-end me-3 mt-1"><a href="" class="text-decoration-none text-black">More<i
+                                class="fa-solid fa-angle-right ms-1"></i></a></p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-4 mt-3">
+                <div class="col mb-3">
+                    <div class="card">
+                        <img src="products/s1j.jpg" class="card-img-top" alt="..." class="trans">
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-6">DJI Care Refresh 2-Year Plan<br> (Osmo Mobile 6)</p>
+                            <span class="fs-6">USD &#36;16</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <a href="" class="text-decoration-none card-text">
+                        <div class="card">
+                            <img src="products/s1j.jpg" class="card-img-top" alt="..." class="trans">
+                            <div class="card-body text-center mt-0">
+                                <p class="card-text fs-6">DJI Care Refresh 1-Year Plan<br> (Osmo Mobile 6)</p>
+                                <span class="fs-6">USD &#36;9</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img src="products/s2j.jpg" class="card-img-top" alt="..." class="trans">
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-6">DJI Care Refresh 1-Year Plan<br> (Osmo Action 3)</p>
+                            <span class="fs-6">USD &#36;25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img src="products/s2j.jpg" class="card-img-top" alt="..." class="trans">
+                        <div class="card-body text-center mt-0">
+                            <p class="card-text fs-6">DJI Care Refresh 2-Year Plan<br> (Osmo Action 3)</p>
+                            <span class="fs-6">USD &#36;35</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close opacity-100 me-4" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                <span class="offcanvas-title ms-auto" id="offcanvasWithBothOptionsLabel"><img
+                        src="images/storem.png"></span>
+                <a href="" class="ihome text-black ms-auto"><i class="fa-solid fa-magnifying-glass fs-5"></i></a>
+                <a href="#" class="isearch text-black ms-4"><i class="fa-solid fa-cart-shopping fs-5"></i></a>
+            </div>
+            <div class="container px-2">
+                <div class="row bg-custom">
+                    <div class="col py-3 mx-2">
+                        <a href="" class=" text-decoration-none text-black"><img src="images/idrone.png" alt=""
+                                class="mb-1"><span class="h4 ms-3 fs-4">Camera
+                                Drones</span></a>
+                        <a href="" class="text-decoration-none text-black float-end"><i
+                                class="fa-solid fa-plus fs-5 mt-2 me-2"></i></a>
+                    </div>
+                </div>
+                <div class="row bg-custom">
+                    <div class="col py-3 mx-2">
+                        <a href="" class=" text-decoration-none text-black"><img src="images/igimbal.png" alt=""
+                                class="mb-1"><span class="h4 ms-3 fs-4">Handheld
+                                Gimbals</span></a>
+                        <a href="" class="text-decoration-none text-black float-end"><i
+                                class="fa-solid fa-plus fs-5 mt-2 me-2"></i></a>
+                    </div>
+                </div>
+                <div class="row bg-custom">
+                    <div class="col py-3 mx-2">
+                        <a href="" class=" text-decoration-none text-black"><img src="images/ispecial.png" alt=""
+                                class="mb-1"><span class="h4 ms-3 fs-4">Specialized</span></a>
+                        <a href="" class="text-decoration-none text-black float-end"><i
+                                class="fa-solid fa-plus fs-5 mt-2 me-2"></i></a>
+                    </div>
+                </div>
+                <div class="row bg-custom">
+                    <div class="col py-3 mx-2">
+                        <a href="" class=" text-decoration-none text-black"><img src="images/isearch.png" alt=""
+                                class="mb-1"><span class="h4 ms-3 fs-4">Explore</span></a>
+                        <a href="" class="text-decoration-none text-black float-end"><i
+                                class="fa-solid fa-plus fs-5 mt-2 me-2"></i></a>
+                    </div>
+                </div>
+                <div class="row bg-custom">
+                    <div class="col py-3 mx-2">
+                        <a href="" class=" text-decoration-none text-black"><img src="images/iorders.png" alt=""
+                                class="mb-1"><span class="h4 ms-3 fs-4">My Orders</span></a>
+                        <a href="" class="text-decoration-none text-black float-end"><i
+                                class="fa-solid fa-plus fs-5 mt-2 me-2"></i></a>
+                    </div>
+                </div>
+                <div class="row bg-custom">
+                    <div class="col py-3 mx-2">
+                        <a href="" class=" text-decoration-none text-black"><img src="images/icoupons.png" alt=""
+                                class="mb-1"><span class="h4 ms-3 fs-4">Coupons</span></a>
+                        <a href="" class="text-decoration-none text-black float-end"><i
+                                class="fa-solid fa-plus fs-5 mt-2 me-2"></i></a>
+                    </div>
+                </div>
+                <div class="row bg-custom">
+                    <div class="col py-3 mx-2">
+                        <a href="" class=" text-decoration-none text-black"><img src="images/icart.png" alt=""
+                                class="mb-1"><span class="h4 ms-3 fs-4">My Cart</span></a>
+                        <a href="" class="text-decoration-none text-black float-end"><i
+                                class="fa-solid fa-plus fs-5 mt-2 me-2"></i></a>
+                    </div>
+                </div>
+                <div class="row bg-custom">
+                    <div class="col py-3 mx-2">
+                        <a href="" class=" text-decoration-none text-black"><img src="images/iheart.png" alt=""
+                                class="mb-1"><span class="h4 ms-3 fs-4">My Wishlist</span></a>
+                        <a href="" class="text-decoration-none text-black float-end"><i
+                                class="fa-solid fa-plus fs-5 mt-2 me-2"></i></a>
+                    </div>
+                </div>
+                <div class="row bg-custom">
+                    <div class="col py-3 mx-2">
+                        <a href="" class=" text-decoration-none text-black"><img src="images/isupport.png" alt=""
+                                class="mb-1"><span class="h4 ms-3 fs-4">Support</span></a>
+                        <a href="" class="text-decoration-none text-black float-end"><i
+                                class="fa-solid fa-plus fs-5 mt-2 me-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+        <div class="container-fluid bg-foot py-5 d-block d-md-block mt-5">
+            <div class="container py-4">
+                <div class="row mb-5">
+                    <div class="col text-center">
+                        <i class="fa-solid fa-truck-fast fs-1"></i>
+                        <p class="fs-6 cstm mt-3">Free shipping on orders over USD &#36;149 </p>
+                    </div>
+                    <div class="col text-center">
+                        <i class="fa-regular fa-credit-card fs-1"></i>
+                        <p class="fs-6 cstm mt-3">We accept credit cards, PayPal, and bank wires</p>
+                    </div>
+                    <div class="col text-center">
+                        <i class="fa-regular fa-message fs-1"></i>
+                        <p class="fs-6 cstm mt-3">Order Service: <a href="" class="text-decoration-none">Live Chat</a>
+                        </p>
+                    </div>
+                    <hr class="mt-5">
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <ul class="ul-custom list-unstyled">
+                            <h6 class="text-black mb-3">Product Categories</h6>
+                            <li><a href="" class="text-decoration-none">Camera Drones</a></li>
+                            <li><a href="" class="text-decoration-none">Handheld</a></li>
+                            <li><a href="" class="text-decoration-none">Education & Industry</a></li>
+                            <li><a href="" class="text-decoration-none">Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="col text-black">
+                        <ul class="ul-custom list-unstyled">
+                            <h6 class="text-black mb-3">Help & Support</h6>
+                            <li><a href="" class="text-decoration-none">Payment Methods</a></li>
+                            <li><a href="" class="text-decoration-none">Order Information</a></li>
+                            <li><a href="" class="text-decoration-none">Shipping & Delivery</a></li>
+                            <li><a href="" class="text-decoration-none">Return Policy</a></li>
+                            <li><a href="" class="text-decoration-none">Technical Support</a></li>
+                            <li><a href="" class="text-decoration-none">Repair Services</a></li>
+                            <li><a href="" class="text-decoration-none">After-Sales Servicies Policies</a></li>
+                        </ul>
+                    </div>
+                    <div class="col text-black">
+                        <ul class="ul-custom list-unstyled">
+                            <h6 class="text-black mb-3">Programs</h6>
+                            <li><a href="" class="text-decoration-none">Shri Credit</a></li>
+                            <li><a href="" class="text-decoration-none">Refurbished Products</a></li>
+                            <li><a href="" class="text-decoration-none">Shri Store App</a></li>
+                        </ul>
+                    </div>
+                    <div class="col text-black">
+                        <ul class="ul-custom list-unstyled">
+                            <h6 class="text-black mb-3">Explore</h6>
+                            <li><a href="" class="text-decoration-none">Sky Pixel</a></li>
+                            <li><a href="" class="text-decoration-none">Shri Forum</a></li>
+                            <li><a href="" class="text-decoration-none">Buying Guides</a></li>
+
+                            <li><a href="" class="text-decoration-none">Fly Safe</a></li>
+
+                            <li><a href="" class="text-decoration-none">Shri Flying Tips</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col text-black d-none d-md-block">
+                        <ul class="ul-custom list-unstyled">
+                            <h6 class="end text-black mb-3 mt-0">Subscribe</h6>
+                            <li class="cstm">Be the first to find out about our<br> newest offerings and hottest<br>
+                                deals, and
+                                what’s new.</li>
+                            <input type="search" placeholder="Your Email Address" class="email"><button class="ebtn"><i
+                                    class="fa-regular fa-envelope text-white"></i></button>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-5 d-none d-md-block">
+                    <div class="row mt-5">
+                        <div class="col-9">
+                            <a href=""><img src="images/logobm.png" alt=""></a>
+                            <ul class="foot-ul list-unstyled">
+                                <li class="foot-li"><a href="" class="text-decoration-none">Who We Are</a></li>
+                                <li class="foot-li"><a href="" class="text-decoration-none">Contact Us</a></li>
+                                <li class="foot-li"><a href="" class="text-decoration-none">Careers</a></li>
+                                <li class="foot-li"><a href="" class="text-decoration-none">Flagship Stores</a></li>
+                            </ul>
+                        </div>
+                        <div class="col text-white text-end">
+                            <span class="social"><a href="" class="text-decoration-none"><i
+                                        class="fa-brands fa-facebook-f"></i></a></span>
+                            <span class="social"><a href="" class="text-decoration-none"><i
+                                        class="fa-brands fa-twitter"></i></a></span>
+                            <span class="social"><a href="" class="text-decoration-none"><i
+                                        class="fa-brands fa-youtube"></i></a></span>
+                            <span class="social"><a href="" class="text-decoration-none"><i
+                                        class="fa-brands fa-vimeo-v"></i></a></span>
+                            <span class="social"><a href="" class="text-decoration-none"><i
+                                        class="fa-brands fa-instagram"></i></a></span>
+                        </div>
+                    </div>
+                    <div class="row border-top mt-2">
+                        <div class="col-8">
+                            <ul class="list-inline mt-3">
+                                <span class="copyright cstm me-3">Copyright &copy; 2022 Shri All Rights Reserved</span>
+                                <li class="list-inline-item ms-1"><a href="" class="text-decoration-none">Privacy
+                                        Policy</a>
+                                </li>
+                                <li class="list-inline-item"><a href="" class="text-decoration-none">Cookie
+                                        Prefernces</a>
+                                </li>
+                                <li class="list-inline-item"><a href="" class="text-decoration-none">Terms of Use</a>
+                                </li>
+                                <li class="list-inline-item"><a href="" class="text-decoration-none">Site Map</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col text-white text-end mt-3">
+                            <span>
+                                <h6 class="d-inline-block ms-2 cstm">Feedback on web experience?<a href=""
+                                        class=" clr-foot text-decoration-none ms-2">Click Here</a></h6>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

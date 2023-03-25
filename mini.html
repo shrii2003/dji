@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Mini 3 Pro</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<style>
+    .snav {
+        background-color: #F7F9FA;
+    }
+
+    .tnav {
+        color: #707473;
+        font-size: 12px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        --bs-dropdown-min-width: 5rem;
+        font-size: 15px;
+    }
+
+    .lang:hover {
+        background-color: #EDEFF0;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        background-color: #787878;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 50%;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    @media (max-width: 576px) {
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: #787878;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 50%;
+        }
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        background-color: #787878;
+        border-radius: 50%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 23px;
+        height: 23px;
+    }
+
+    @media (max-width: 576px) {
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    .desc {
+        font-size: 14px;
+        color: #707473;
+    }
+
+    ul.desc {
+        padding: 0px 0px 0px 16px;
+        line-height: 25px;
+    }
+
+    .sicon {
+        font-size: 10px;
+    }
+
+    .tip-bg {
+        background-color: #F7F9FA;
+    }
+
+    .tips {
+        color: #fa8c16;
+        font-size: 12px;
+        border: 1px solid #fa8c16;
+        border-radius: 8px;
+    }
+
+    .black {
+        color: #333333;
+    }
+
+    .boxb {
+        border: 1px solid yellow;
+    }
+
+    .select {
+        background-color: transparent;
+        border: 1px solid #d2d2d2;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .select:hover {
+        background-color: transparent;
+        border: 1px solid #1890ff;
+        border-radius: 8px;
+    }
+
+    .select:active {
+        background-color: transparent;
+        border: 2px solid #1890ff;
+        border-radius: 8px;
+    }
+
+    .active1 {
+        background-color: transparent;
+        border: 2px solid #1890ff;
+        border-radius: 8px;
+    }
+
+    .stop {
+        position: sticky;
+        top: 8%;
+    }
+
+    @media (max-width: 576px) {
+        .stop {
+            position: relative;
+            top: 0;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .stick {
+            position: relative;
+            top: 0;
+        }
+    }
+
+    .stick {
+        position: sticky;
+        top: 69%;
+    }
+
+    .dcity {
+        color: #1890ff;
+        background-color: #ededed;
+        border: 0;
+        height: 30px;
+        width: 90px;
+        outline: none;
+
+
+    }
+
+    .shop {
+        width: 140px;
+        height: 2.5rem;
+        padding: 0 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        background-image: linear-gradient(0deg, #1890ff, #40a9ff);
+        color: #fff;
+        border: 0;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    .shop:hover {
+        background-image: linear-gradient(-0deg, #53b4ec, #43ABFF);
+    }
+
+    .card,
+    .card-img {
+        border-radius: 0;
+    }
+
+    .csbtn {
+        background-color: #222222;
+    }
+
+    .icon {
+        background-color: transparent;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        border: none;
+    }
+
+    .icon:hover {
+        background-color: #e8e7e7;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .upshadow {
+        box-shadow: 0px -4px 16px -10px rgba(97, 97, 97, 1);
+    }
+
+    .btn-transparent {
+        background-color: transparent;
+        border: 0;
+    }
+
+    .btn-transparent:hover {
+        border-radius: 0;
+        border-bottom: 2px solid black;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        --bs-dropdown-min-width: 5rem;
+        font-size: 15px;
+    }
+</style>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+        <div class="container-fluid snav d-none d-md-block">
+            <div class="container">
+                <div class="row py-1">
+                    <div class="col">
+                        <p class=" d-inline-block mb-0"><a href="" class="text-decoration-none tnav">shri.com</a></p>
+                        <span class="ms-2 tnav">|</span>
+                        <p class=" d-inline-block ms-2 mb-0"><a href="" class="text-decoration-none tnav">Refurbished
+                                Products</a></p>
+                        <div class="dropdown d-inline-block">
+                            <button class="btn btn-transparent dropdown-toggle ms-2 tnav" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </button>
+                            <ul class="dropdown-menu border-1">
+                                <li><a class="dropdown-item" href="#">Buying Guides</a></li>
+                                <li><a class="dropdown-item" href="#">Shri Credit</a></li>
+                                <li><a class="dropdown-item" href="#">Shri Store App</a></li>
+                            </ul>
+                        </div>
+                        <span class="ms-2 tnav">|</span>
+                        <p class=" d-inline-block ms-2 tnav mb-0">Get 1% of the total
+                            purchase value in Shri Credit. <a href="" class="text-decoration-none ">Learn
+                                More</a></p>
+                    </div>
+                    <div class="col text-end">
+                        <span class="lang"><a href="" class=" clr-foot"><i class="tnav fa-solid fa-globe"></i>
+                                <h6 class="d-inline-block tnav">United States/English</h6>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-white border-bottom">
+            <div class="container">
+                <button class="navbar-toggler me-4 outline-0 border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasTop" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="offcanvasTop">
+                    <span><span><i class="fa-solid fa-bars text-black"></i></span></span>
+                </button>
+                <a class="navbar-brand ms-5 ms-md-0" href="#">
+                    <picture>
+                        <source srcset="images/storem.png" media="(max-width: 576px)">
+                        <img src="images/store.png" alt="...">
+                    </picture>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-4 mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="camera.html" class="text-decoration-none"><button
+                                    class="btn-transparent nav-link text-black" href="#">Camera
+                                    Drones</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="handheld.html" class="text-decoration-none"><button
+                                    class="btn-transparent nav-link text-black ms-3" href="#">Handheld</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-transparent nav-link  text-black ms-3" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Specialized
+                                </button>
+                                <ul class="dropdown-menu mt-2">
+                                    <li><a class="dropdown-item" href="#">Enterprise</a></li>
+                                    <li><a class="dropdown-item" href="#">Agriculture</a></li>
+                                    <li><a class="dropdown-item" href="#">Shri Automotive</a></li>
+                                    <li><a class="dropdown-item" href="#">Education</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-transparent nav-link  text-black ms-3" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Explore
+                                </button>
+                                <ul class="dropdown-menu mt-2">
+                                    <li><a class="dropdown-item" href="#">Sky Pixel</a></li>
+                                    <li><a class="dropdown-item" href="#">Shri Forum</a></li>
+                                    <li><a class="dropdown-item" href="#">Newsroom</a></li>
+                                    <li><a class="dropdown-item" href="#">Buying Guides</a></li>
+                                    <li><a class="dropdown-item" href="#">Events</a></li>
+                                    <li><a class="dropdown-item" href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn-transparent nav-link  text-black ms-3" href="#">Support</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cold ms-auto ms-md-0 me-1 me-md-0">
+                    <button class="icon me-md-2"><i class="bi bi-search fs-5"></i></button>
+                </div>
+                <div class="cold me-1 me-md-0">
+                    <button class="icon me-md-2"><i class="bi bi-cart3 fs-5"></i></button>
+                </div>
+
+                <div class="cold me-0 d-none d-md-block">
+                    <button class="icon"><i class="bi bi-person fs-5"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container d-none d-md-block">
+            <div class="row py-3">
+                <div class="col">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="store.html" class="text-decoration-none tnav">Store</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="camera.html" class="text-decoration-none tnav">Camera
+                                    Drones</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#" class="text-decoration-none tnav">Shri Mini 3
+                                    Pro</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid upshadow fixed-bottom bg-white py-3 d-none d-md-block" data-aos="fade-up"
+            data-aos-duration="700" data-aos-easing="ease-in-sine">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <span><i class="bi bi-truck me-2"></i></span>
+                        <span class="black fs-6 fw-semibold me-2">Deliver to</span>
+                        <span>
+                            <select class="dcity py-1 px-1">
+                                <option>India</option>
+                                <option value="Public Safety">United States</option>
+                                <option value="Electricity">United Kingdom</option>
+                                <option value="Oil & Gas">Japan</option>
+                                <option value="AEC & Surveying">China</option>
+                                <option value="Construction">Pakistan</option>
+                                <option value="Other">Russia</option>
+                            </select>
+                        </span>
+                        <p class="desc mt-1">Ship within 1 business day(s), expected arrival date: 11/19/2022 (UTC-5)
+                        </p>
+                    </div>
+                    <div class="col-5 text-end">
+                        <p class="black fs-5 fw-semibold mb-0">USD &#36;759</p>
+                        <span><img
+                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAzMiIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCIgeG1sbnM9Imh0dHA6JiN4MkY7JiN4MkY7d3d3LnczLm9yZyYjeDJGOzIwMDAmI3gyRjtzdmciPjxwYXRoIGZpbGw9IiMwMDljZGUiIG9wYWNpdHk9IjEiIGQ9Ik0gMjAuOTI0IDcuMTU3IEMgMjEuMjA0IDUuMDU3IDIwLjkyNCAzLjY1NyAxOS44MDEgMi4zNTcgQyAxOC41ODMgMC45NTcgMTYuNDMgMC4yNTcgMTMuNzE2IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNzU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA2LjY5NCAyNi41NTcgQyA2LjYgMjYuOTU3IDYuODgxIDI3LjI1NyA3LjI1NSAyNy4yNTcgTCAxMS4zNzUgMjcuMjU3IEMgMTEuODQ0IDI3LjI1NyAxMi4zMTEgMjYuOTU3IDEyLjQwNSAyNi40NTcgTCAxMi40MDUgMjYuMTU3IEwgMTMuMjQ3IDIwLjk1NyBMIDEzLjI0NyAyMC43NTcgQyAxMy4zNDEgMjAuMjU3IDEzLjgwOSAxOS44NTcgMTQuMjc3IDE5Ljg1NyBMIDE0Ljg0IDE5Ljg1NyBDIDE4Ljg2NCAxOS44NTcgMjEuOTU0IDE4LjE1NyAyMi44OSAxMy4xNTcgQyAyMy4zNTggMTEuMDU3IDIzLjE3MiA5LjM1NyAyMi4wNDggOC4xNTcgQyAyMS43NjcgNy43NTcgMjEuMjk4IDcuNDU3IDIwLjkyNCA3LjE1NyBMIDIwLjkyNCA3LjE1NyI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMTIxNjkiIG9wYWNpdHk9IjEiIGQ9Ik0gMjAuOTI0IDcuMTU3IEMgMjEuMjA0IDUuMDU3IDIwLjkyNCAzLjY1NyAxOS44MDEgMi4zNTcgQyAxOC41ODMgMC45NTcgMTYuNDMgMC4yNTcgMTMuNzE2IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNzU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA4LjI4NiAxNi4wNTcgTCA4LjE5MiAxNi4zNTcgQyA4LjI4NiAxNS43NTcgOC43NTQgMTUuMzU3IDkuMzE1IDE1LjM1NyBMIDExLjY1NSAxNS4zNTcgQyAxNi4yNDMgMTUuMzU3IDE5LjgwMSAxMy4zNTcgMjAuOTI0IDcuNzU3IEMgMjAuODMxIDcuNDU3IDIwLjkyNCA3LjM1NyAyMC45MjQgNy4xNTciPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBvcGFjaXR5PSIxIiBkPSJNIDkuNTA0IDcuMTU3IEMgOS41OTYgNi44NTcgOS43ODQgNi41NTcgMTAuMDY1IDYuMzU3IEMgMTAuMjUxIDYuMzU3IDEwLjM0NSA2LjI1NyAxMC41MzIgNi4yNTcgTCAxNi43MTEgNi4yNTcgQyAxNy40NjEgNi4yNTcgMTguMjA4IDYuMzU3IDE4Ljc3MiA2LjQ1NyBDIDE4Ljk1OCA2LjQ1NyAxOS4xNDYgNi40NTcgMTkuMzMzIDYuNTU3IEMgMTkuNTIgNi42NTcgMTkuNzA3IDYuNjU3IDE5LjgwMSA2Ljc1NyBDIDE5Ljg5NCA2Ljc1NyAxOS45ODcgNi43NTcgMjAuMDgyIDYuNzU3IEMgMjAuMzYyIDYuODU3IDIwLjY0MyA3LjA1NyAyMC45MjQgNy4xNTcgQyAyMS4yMDQgNS4wNTcgMjAuOTI0IDMuNjU3IDE5LjgwMSAyLjI1NyBDIDE4LjY3NyAwLjg1NyAxNi41MjUgMC4yNTcgMTMuODA5IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNjU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA4LjI4NiAxNi4wNTcgTCA5LjUwNCA3LjE1NyBaIj48L3BhdGg+PC9zdmc+"
+                                alt="" height="20px" width="20px"></span>
+                        <span><img
+                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAxcHgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxMDEgMzIiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHhtbG5zPSJodHRwOiYjeDJGOyYjeDJGO3d3dy53My5vcmcmI3gyRjsyMDAwJiN4MkY7c3ZnIj48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDEyLjIzNyAyLjggTCA0LjQzNyAyLjggQyAzLjkzNyAyLjggMy40MzcgMy4yIDMuMzM3IDMuNyBMIDAuMjM3IDIzLjcgQyAwLjEzNyAyNC4xIDAuNDM3IDI0LjQgMC44MzcgMjQuNCBMIDQuNTM3IDI0LjQgQyA1LjAzNyAyNC40IDUuNTM3IDI0IDUuNjM3IDIzLjUgTCA2LjQzNyAxOC4xIEMgNi41MzcgMTcuNiA2LjkzNyAxNy4yIDcuNTM3IDE3LjIgTCAxMC4wMzcgMTcuMiBDIDE1LjEzNyAxNy4yIDE4LjEzNyAxNC43IDE4LjkzNyA5LjggQyAxOS4yMzcgNy43IDE4LjkzNyA2IDE3LjkzNyA0LjggQyAxNi44MzcgMy41IDE0LjgzNyAyLjggMTIuMjM3IDIuOCBaIE0gMTMuMTM3IDEwLjEgQyAxMi43MzcgMTIuOSAxMC41MzcgMTIuOSA4LjUzNyAxMi45IEwgNy4zMzcgMTIuOSBMIDguMTM3IDcuNyBDIDguMTM3IDcuNCA4LjQzNyA3LjIgOC43MzcgNy4yIEwgOS4yMzcgNy4yIEMgMTAuNjM3IDcuMiAxMS45MzcgNy4yIDEyLjYzNyA4IEMgMTMuMTM3IDguNCAxMy4zMzcgOS4xIDEzLjEzNyAxMC4xIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDM1LjQzNyAxMCBMIDMxLjczNyAxMCBDIDMxLjQzNyAxMCAzMS4xMzcgMTAuMiAzMS4xMzcgMTAuNSBMIDMwLjkzNyAxMS41IEwgMzAuNjM3IDExLjEgQyAyOS44MzcgOS45IDI4LjAzNyA5LjUgMjYuMjM3IDkuNSBDIDIyLjEzNyA5LjUgMTguNjM3IDEyLjYgMTcuOTM3IDE3IEMgMTcuNTM3IDE5LjIgMTguMDM3IDIxLjMgMTkuMzM3IDIyLjcgQyAyMC40MzcgMjQgMjIuMTM3IDI0LjYgMjQuMDM3IDI0LjYgQyAyNy4zMzcgMjQuNiAyOS4yMzcgMjIuNSAyOS4yMzcgMjIuNSBMIDI5LjAzNyAyMy41IEMgMjguOTM3IDIzLjkgMjkuMjM3IDI0LjMgMjkuNjM3IDI0LjMgTCAzMy4wMzcgMjQuMyBDIDMzLjUzNyAyNC4zIDM0LjAzNyAyMy45IDM0LjEzNyAyMy40IEwgMzYuMTM3IDEwLjYgQyAzNi4yMzcgMTAuNCAzNS44MzcgMTAgMzUuNDM3IDEwIFogTSAzMC4zMzcgMTcuMiBDIDI5LjkzNyAxOS4zIDI4LjMzNyAyMC44IDI2LjEzNyAyMC44IEMgMjUuMDM3IDIwLjggMjQuMjM3IDIwLjUgMjMuNjM3IDE5LjggQyAyMy4wMzcgMTkuMSAyMi44MzcgMTguMiAyMy4wMzcgMTcuMiBDIDIzLjMzNyAxNS4xIDI1LjEzNyAxMy42IDI3LjIzNyAxMy42IEMgMjguMzM3IDEzLjYgMjkuMTM3IDE0IDI5LjczNyAxNC42IEMgMzAuMjM3IDE1LjMgMzAuNDM3IDE2LjIgMzAuMzM3IDE3LjIgWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMDMwODciIGQ9Ik0gNTUuMzM3IDEwIEwgNTEuNjM3IDEwIEMgNTEuMjM3IDEwIDUwLjkzNyAxMC4yIDUwLjczNyAxMC41IEwgNDUuNTM3IDE4LjEgTCA0My4zMzcgMTAuOCBDIDQzLjIzNyAxMC4zIDQyLjczNyAxMCA0Mi4zMzcgMTAgTCAzOC42MzcgMTAgQyAzOC4yMzcgMTAgMzcuODM3IDEwLjQgMzguMDM3IDEwLjkgTCA0Mi4xMzcgMjMgTCAzOC4yMzcgMjguNCBDIDM3LjkzNyAyOC44IDM4LjIzNyAyOS40IDM4LjczNyAyOS40IEwgNDIuNDM3IDI5LjQgQyA0Mi44MzcgMjkuNCA0My4xMzcgMjkuMiA0My4zMzcgMjguOSBMIDU1LjgzNyAxMC45IEMgNTYuMTM3IDEwLjYgNTUuODM3IDEwIDU1LjMzNyAxMCBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA2Ny43MzcgMi44IEwgNTkuOTM3IDIuOCBDIDU5LjQzNyAyLjggNTguOTM3IDMuMiA1OC44MzcgMy43IEwgNTUuNzM3IDIzLjYgQyA1NS42MzcgMjQgNTUuOTM3IDI0LjMgNTYuMzM3IDI0LjMgTCA2MC4zMzcgMjQuMyBDIDYwLjczNyAyNC4zIDYxLjAzNyAyNCA2MS4wMzcgMjMuNyBMIDYxLjkzNyAxOCBDIDYyLjAzNyAxNy41IDYyLjQzNyAxNy4xIDYzLjAzNyAxNy4xIEwgNjUuNTM3IDE3LjEgQyA3MC42MzcgMTcuMSA3My42MzcgMTQuNiA3NC40MzcgOS43IEMgNzQuNzM3IDcuNiA3NC40MzcgNS45IDczLjQzNyA0LjcgQyA3Mi4yMzcgMy41IDcwLjMzNyAyLjggNjcuNzM3IDIuOCBaIE0gNjguNjM3IDEwLjEgQyA2OC4yMzcgMTIuOSA2Ni4wMzcgMTIuOSA2NC4wMzcgMTIuOSBMIDYyLjgzNyAxMi45IEwgNjMuNjM3IDcuNyBDIDYzLjYzNyA3LjQgNjMuOTM3IDcuMiA2NC4yMzcgNy4yIEwgNjQuNzM3IDcuMiBDIDY2LjEzNyA3LjIgNjcuNDM3IDcuMiA2OC4xMzcgOCBDIDY4LjYzNyA4LjQgNjguNzM3IDkuMSA2OC42MzcgMTAuMSBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5MC45MzcgMTAgTCA4Ny4yMzcgMTAgQyA4Ni45MzcgMTAgODYuNjM3IDEwLjIgODYuNjM3IDEwLjUgTCA4Ni40MzcgMTEuNSBMIDg2LjEzNyAxMS4xIEMgODUuMzM3IDkuOSA4My41MzcgOS41IDgxLjczNyA5LjUgQyA3Ny42MzcgOS41IDc0LjEzNyAxMi42IDczLjQzNyAxNyBDIDczLjAzNyAxOS4yIDczLjUzNyAyMS4zIDc0LjgzNyAyMi43IEMgNzUuOTM3IDI0IDc3LjYzNyAyNC42IDc5LjUzNyAyNC42IEMgODIuODM3IDI0LjYgODQuNzM3IDIyLjUgODQuNzM3IDIyLjUgTCA4NC41MzcgMjMuNSBDIDg0LjQzNyAyMy45IDg0LjczNyAyNC4zIDg1LjEzNyAyNC4zIEwgODguNTM3IDI0LjMgQyA4OS4wMzcgMjQuMyA4OS41MzcgMjMuOSA4OS42MzcgMjMuNCBMIDkxLjYzNyAxMC42IEMgOTEuNjM3IDEwLjQgOTEuMzM3IDEwIDkwLjkzNyAxMCBaIE0gODUuNzM3IDE3LjIgQyA4NS4zMzcgMTkuMyA4My43MzcgMjAuOCA4MS41MzcgMjAuOCBDIDgwLjQzNyAyMC44IDc5LjYzNyAyMC41IDc5LjAzNyAxOS44IEMgNzguNDM3IDE5LjEgNzguMjM3IDE4LjIgNzguNDM3IDE3LjIgQyA3OC43MzcgMTUuMSA4MC41MzcgMTMuNiA4Mi42MzcgMTMuNiBDIDgzLjczNyAxMy42IDg0LjUzNyAxNCA4NS4xMzcgMTQuNiBDIDg1LjczNyAxNS4zIDg1LjkzNyAxNi4yIDg1LjczNyAxNy4yIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDA5Y2RlIiBkPSJNIDk1LjMzNyAzLjMgTCA5Mi4xMzcgMjMuNiBDIDkyLjAzNyAyNCA5Mi4zMzcgMjQuMyA5Mi43MzcgMjQuMyBMIDk1LjkzNyAyNC4zIEMgOTYuNDM3IDI0LjMgOTYuOTM3IDIzLjkgOTcuMDM3IDIzLjQgTCAxMDAuMjM3IDMuNSBDIDEwMC4zMzcgMy4xIDEwMC4wMzcgMi44IDk5LjYzNyAyLjggTCA5Ni4wMzcgMi44IEMgOTUuNjM3IDIuOCA5NS40MzcgMyA5NS4zMzcgMy4zIFoiPjwvcGF0aD48L3N2Zz4"
+                                alt="" height="20px" width="70px"></span>
+                        <p class="d-inline-block">Buy Now, pay later. <a href="" class="text-decoration-none">Learn
+                                More</a>
+                        </p>
+                    </div>
+                    <div class="col-2 text-start">
+                        <a href="cart.html" class="text-decoration-none"><button class="shop mt-1">Shop Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col me-md-5">
+                    <div id="carouselExampleIndicators" class="carousel slide  stop" data-bs-ride="true">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/9421412f8e83278b37b538744a0913b0@ultra.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/0c9ef45f0f73504682fe3ac1b7c8a932@ultra.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/67600aa9aca2dcd388609d97e62b1bfb@ultra.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/95c923686020b536a85470ecc48740ed@ultra.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/3dcfdfb12067648a1200e6407747b511@ultra.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="row py-5 stick text-center">
+                        <div class="col">
+                            <button class="rounded-pill border-0 csbtn text-white px-2 py-1 me-2"><i
+                                    class="bi bi-images"></i>
+                                Photos</button>
+                            <button class="border-0 bg-transparent"><i class="bi bi-play-fill"></i> Intro</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ms-md-5">
+                    <div class="row px-3 px-md-0">
+                        <div class="col">
+                            <h5 class="fs-2 black fw-semibold">Shri Mini 3 Pro (SHRI RC-N1)</h5>
+                            <p class="fs-4 fw-semibold black mt-3 mb-0">USD &#36;759</p>
+                            <span><img
+                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAzMiIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCIgeG1sbnM9Imh0dHA6JiN4MkY7JiN4MkY7d3d3LnczLm9yZyYjeDJGOzIwMDAmI3gyRjtzdmciPjxwYXRoIGZpbGw9IiMwMDljZGUiIG9wYWNpdHk9IjEiIGQ9Ik0gMjAuOTI0IDcuMTU3IEMgMjEuMjA0IDUuMDU3IDIwLjkyNCAzLjY1NyAxOS44MDEgMi4zNTcgQyAxOC41ODMgMC45NTcgMTYuNDMgMC4yNTcgMTMuNzE2IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNzU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA2LjY5NCAyNi41NTcgQyA2LjYgMjYuOTU3IDYuODgxIDI3LjI1NyA3LjI1NSAyNy4yNTcgTCAxMS4zNzUgMjcuMjU3IEMgMTEuODQ0IDI3LjI1NyAxMi4zMTEgMjYuOTU3IDEyLjQwNSAyNi40NTcgTCAxMi40MDUgMjYuMTU3IEwgMTMuMjQ3IDIwLjk1NyBMIDEzLjI0NyAyMC43NTcgQyAxMy4zNDEgMjAuMjU3IDEzLjgwOSAxOS44NTcgMTQuMjc3IDE5Ljg1NyBMIDE0Ljg0IDE5Ljg1NyBDIDE4Ljg2NCAxOS44NTcgMjEuOTU0IDE4LjE1NyAyMi44OSAxMy4xNTcgQyAyMy4zNTggMTEuMDU3IDIzLjE3MiA5LjM1NyAyMi4wNDggOC4xNTcgQyAyMS43NjcgNy43NTcgMjEuMjk4IDcuNDU3IDIwLjkyNCA3LjE1NyBMIDIwLjkyNCA3LjE1NyI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMTIxNjkiIG9wYWNpdHk9IjEiIGQ9Ik0gMjAuOTI0IDcuMTU3IEMgMjEuMjA0IDUuMDU3IDIwLjkyNCAzLjY1NyAxOS44MDEgMi4zNTcgQyAxOC41ODMgMC45NTcgMTYuNDMgMC4yNTcgMTMuNzE2IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNzU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA4LjI4NiAxNi4wNTcgTCA4LjE5MiAxNi4zNTcgQyA4LjI4NiAxNS43NTcgOC43NTQgMTUuMzU3IDkuMzE1IDE1LjM1NyBMIDExLjY1NSAxNS4zNTcgQyAxNi4yNDMgMTUuMzU3IDE5LjgwMSAxMy4zNTcgMjAuOTI0IDcuNzU3IEMgMjAuODMxIDcuNDU3IDIwLjkyNCA3LjM1NyAyMC45MjQgNy4xNTciPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBvcGFjaXR5PSIxIiBkPSJNIDkuNTA0IDcuMTU3IEMgOS41OTYgNi44NTcgOS43ODQgNi41NTcgMTAuMDY1IDYuMzU3IEMgMTAuMjUxIDYuMzU3IDEwLjM0NSA2LjI1NyAxMC41MzIgNi4yNTcgTCAxNi43MTEgNi4yNTcgQyAxNy40NjEgNi4yNTcgMTguMjA4IDYuMzU3IDE4Ljc3MiA2LjQ1NyBDIDE4Ljk1OCA2LjQ1NyAxOS4xNDYgNi40NTcgMTkuMzMzIDYuNTU3IEMgMTkuNTIgNi42NTcgMTkuNzA3IDYuNjU3IDE5LjgwMSA2Ljc1NyBDIDE5Ljg5NCA2Ljc1NyAxOS45ODcgNi43NTcgMjAuMDgyIDYuNzU3IEMgMjAuMzYyIDYuODU3IDIwLjY0MyA3LjA1NyAyMC45MjQgNy4xNTcgQyAyMS4yMDQgNS4wNTcgMjAuOTI0IDMuNjU3IDE5LjgwMSAyLjI1NyBDIDE4LjY3NyAwLjg1NyAxNi41MjUgMC4yNTcgMTMuODA5IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNjU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA4LjI4NiAxNi4wNTcgTCA5LjUwNCA3LjE1NyBaIj48L3BhdGg+PC9zdmc+"
+                                    alt="" height="20px" width="20px"></span>
+                            <span><img
+                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAxcHgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxMDEgMzIiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHhtbG5zPSJodHRwOiYjeDJGOyYjeDJGO3d3dy53My5vcmcmI3gyRjsyMDAwJiN4MkY7c3ZnIj48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDEyLjIzNyAyLjggTCA0LjQzNyAyLjggQyAzLjkzNyAyLjggMy40MzcgMy4yIDMuMzM3IDMuNyBMIDAuMjM3IDIzLjcgQyAwLjEzNyAyNC4xIDAuNDM3IDI0LjQgMC44MzcgMjQuNCBMIDQuNTM3IDI0LjQgQyA1LjAzNyAyNC40IDUuNTM3IDI0IDUuNjM3IDIzLjUgTCA2LjQzNyAxOC4xIEMgNi41MzcgMTcuNiA2LjkzNyAxNy4yIDcuNTM3IDE3LjIgTCAxMC4wMzcgMTcuMiBDIDE1LjEzNyAxNy4yIDE4LjEzNyAxNC43IDE4LjkzNyA5LjggQyAxOS4yMzcgNy43IDE4LjkzNyA2IDE3LjkzNyA0LjggQyAxNi44MzcgMy41IDE0LjgzNyAyLjggMTIuMjM3IDIuOCBaIE0gMTMuMTM3IDEwLjEgQyAxMi43MzcgMTIuOSAxMC41MzcgMTIuOSA4LjUzNyAxMi45IEwgNy4zMzcgMTIuOSBMIDguMTM3IDcuNyBDIDguMTM3IDcuNCA4LjQzNyA3LjIgOC43MzcgNy4yIEwgOS4yMzcgNy4yIEMgMTAuNjM3IDcuMiAxMS45MzcgNy4yIDEyLjYzNyA4IEMgMTMuMTM3IDguNCAxMy4zMzcgOS4xIDEzLjEzNyAxMC4xIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDM1LjQzNyAxMCBMIDMxLjczNyAxMCBDIDMxLjQzNyAxMCAzMS4xMzcgMTAuMiAzMS4xMzcgMTAuNSBMIDMwLjkzNyAxMS41IEwgMzAuNjM3IDExLjEgQyAyOS44MzcgOS45IDI4LjAzNyA5LjUgMjYuMjM3IDkuNSBDIDIyLjEzNyA5LjUgMTguNjM3IDEyLjYgMTcuOTM3IDE3IEMgMTcuNTM3IDE5LjIgMTguMDM3IDIxLjMgMTkuMzM3IDIyLjcgQyAyMC40MzcgMjQgMjIuMTM3IDI0LjYgMjQuMDM3IDI0LjYgQyAyNy4zMzcgMjQuNiAyOS4yMzcgMjIuNSAyOS4yMzcgMjIuNSBMIDI5LjAzNyAyMy41IEMgMjguOTM3IDIzLjkgMjkuMjM3IDI0LjMgMjkuNjM3IDI0LjMgTCAzMy4wMzcgMjQuMyBDIDMzLjUzNyAyNC4zIDM0LjAzNyAyMy45IDM0LjEzNyAyMy40IEwgMzYuMTM3IDEwLjYgQyAzNi4yMzcgMTAuNCAzNS44MzcgMTAgMzUuNDM3IDEwIFogTSAzMC4zMzcgMTcuMiBDIDI5LjkzNyAxOS4zIDI4LjMzNyAyMC44IDI2LjEzNyAyMC44IEMgMjUuMDM3IDIwLjggMjQuMjM3IDIwLjUgMjMuNjM3IDE5LjggQyAyMy4wMzcgMTkuMSAyMi44MzcgMTguMiAyMy4wMzcgMTcuMiBDIDIzLjMzNyAxNS4xIDI1LjEzNyAxMy42IDI3LjIzNyAxMy42IEMgMjguMzM3IDEzLjYgMjkuMTM3IDE0IDI5LjczNyAxNC42IEMgMzAuMjM3IDE1LjMgMzAuNDM3IDE2LjIgMzAuMzM3IDE3LjIgWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMDMwODciIGQ9Ik0gNTUuMzM3IDEwIEwgNTEuNjM3IDEwIEMgNTEuMjM3IDEwIDUwLjkzNyAxMC4yIDUwLjczNyAxMC41IEwgNDUuNTM3IDE4LjEgTCA0My4zMzcgMTAuOCBDIDQzLjIzNyAxMC4zIDQyLjczNyAxMCA0Mi4zMzcgMTAgTCAzOC42MzcgMTAgQyAzOC4yMzcgMTAgMzcuODM3IDEwLjQgMzguMDM3IDEwLjkgTCA0Mi4xMzcgMjMgTCAzOC4yMzcgMjguNCBDIDM3LjkzNyAyOC44IDM4LjIzNyAyOS40IDM4LjczNyAyOS40IEwgNDIuNDM3IDI5LjQgQyA0Mi44MzcgMjkuNCA0My4xMzcgMjkuMiA0My4zMzcgMjguOSBMIDU1LjgzNyAxMC45IEMgNTYuMTM3IDEwLjYgNTUuODM3IDEwIDU1LjMzNyAxMCBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA2Ny43MzcgMi44IEwgNTkuOTM3IDIuOCBDIDU5LjQzNyAyLjggNTguOTM3IDMuMiA1OC44MzcgMy43IEwgNTUuNzM3IDIzLjYgQyA1NS42MzcgMjQgNTUuOTM3IDI0LjMgNTYuMzM3IDI0LjMgTCA2MC4zMzcgMjQuMyBDIDYwLjczNyAyNC4zIDYxLjAzNyAyNCA2MS4wMzcgMjMuNyBMIDYxLjkzNyAxOCBDIDYyLjAzNyAxNy41IDYyLjQzNyAxNy4xIDYzLjAzNyAxNy4xIEwgNjUuNTM3IDE3LjEgQyA3MC42MzcgMTcuMSA3My42MzcgMTQuNiA3NC40MzcgOS43IEMgNzQuNzM3IDcuNiA3NC40MzcgNS45IDczLjQzNyA0LjcgQyA3Mi4yMzcgMy41IDcwLjMzNyAyLjggNjcuNzM3IDIuOCBaIE0gNjguNjM3IDEwLjEgQyA2OC4yMzcgMTIuOSA2Ni4wMzcgMTIuOSA2NC4wMzcgMTIuOSBMIDYyLjgzNyAxMi45IEwgNjMuNjM3IDcuNyBDIDYzLjYzNyA3LjQgNjMuOTM3IDcuMiA2NC4yMzcgNy4yIEwgNjQuNzM3IDcuMiBDIDY2LjEzNyA3LjIgNjcuNDM3IDcuMiA2OC4xMzcgOCBDIDY4LjYzNyA4LjQgNjguNzM3IDkuMSA2OC42MzcgMTAuMSBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5MC45MzcgMTAgTCA4Ny4yMzcgMTAgQyA4Ni45MzcgMTAgODYuNjM3IDEwLjIgODYuNjM3IDEwLjUgTCA4Ni40MzcgMTEuNSBMIDg2LjEzNyAxMS4xIEMgODUuMzM3IDkuOSA4My41MzcgOS41IDgxLjczNyA5LjUgQyA3Ny42MzcgOS41IDc0LjEzNyAxMi42IDczLjQzNyAxNyBDIDczLjAzNyAxOS4yIDczLjUzNyAyMS4zIDc0LjgzNyAyMi43IEMgNzUuOTM3IDI0IDc3LjYzNyAyNC42IDc5LjUzNyAyNC42IEMgODIuODM3IDI0LjYgODQuNzM3IDIyLjUgODQuNzM3IDIyLjUgTCA4NC41MzcgMjMuNSBDIDg0LjQzNyAyMy45IDg0LjczNyAyNC4zIDg1LjEzNyAyNC4zIEwgODguNTM3IDI0LjMgQyA4OS4wMzcgMjQuMyA4OS41MzcgMjMuOSA4OS42MzcgMjMuNCBMIDkxLjYzNyAxMC42IEMgOTEuNjM3IDEwLjQgOTEuMzM3IDEwIDkwLjkzNyAxMCBaIE0gODUuNzM3IDE3LjIgQyA4NS4zMzcgMTkuMyA4My43MzcgMjAuOCA4MS41MzcgMjAuOCBDIDgwLjQzNyAyMC44IDc5LjYzNyAyMC41IDc5LjAzNyAxOS44IEMgNzguNDM3IDE5LjEgNzguMjM3IDE4LjIgNzguNDM3IDE3LjIgQyA3OC43MzcgMTUuMSA4MC41MzcgMTMuNiA4Mi42MzcgMTMuNiBDIDgzLjczNyAxMy42IDg0LjUzNyAxNCA4NS4xMzcgMTQuNiBDIDg1LjczNyAxNS4zIDg1LjkzNyAxNi4yIDg1LjczNyAxNy4yIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDA5Y2RlIiBkPSJNIDk1LjMzNyAzLjMgTCA5Mi4xMzcgMjMuNiBDIDkyLjAzNyAyNCA5Mi4zMzcgMjQuMyA5Mi43MzcgMjQuMyBMIDk1LjkzNyAyNC4zIEMgOTYuNDM3IDI0LjMgOTYuOTM3IDIzLjkgOTcuMDM3IDIzLjQgTCAxMDAuMjM3IDMuNSBDIDEwMC4zMzcgMy4xIDEwMC4wMzcgMi44IDk5LjYzNyAyLjggTCA5Ni4wMzcgMi44IEMgOTUuNjM3IDIuOCA5NS40MzcgMyA5NS4zMzcgMy4zIFoiPjwvcGF0aD48L3N2Zz4"
+                                    alt="" height="20px" width="70px"></span>
+                            <p class="d-inline-block">Buy Now, pay later. <a href="" class="text-decoration-none">Learn
+                                    More</a>
+                            </p>
+                            <a href="cart.html" class="text-decoration-none"><button
+                                    class="shop  mt-1 mb-3 mb-md-0 d-block d-md-none">Shop Now</button></a>
+                        </div>
+                    </div>
+                    <div class="row py-md-2 px-3 px-md-0">
+                        <div class="col">
+                            <ul class="desc">
+                                <li>Weighs Less than 249 g</li>
+                                <li>Tri-Directional Obstacle Sensing (Forward/Backward/Downward)</li>
+                                <li>Record Up to 4K/60fps Video and 4K/30fps HDR Video</li>
+                                <li>34-min Max Flight Time</li>
+                                <li>True Vertical Shooting</li>
+                                <li>FocusTrack (ActiveTrack, Spotlight, and Point of Interest)</li>
+                                <li>MasterShots</li>
+                                <li>Timelapse</li>
+                            </ul>
+                            <span><a href="" class="desc text-decoration-none text-primary">Overview <i
+                                        class=" fa-solid fa-chevron-right sicon"></i></a></span>
+                        </div>
+                    </div>
+                    <div class="row py-4">
+                        <div class="col-12 col-md-10 tip-bg  pt-4 pb-2 ps-4">
+                            <p class="tips d-inline-block p-1 px-2 mb-2 fw-bold">Tips</p>
+                            <p>Due to limited new product availability, each customer can only<br>purchase 3 units.
+                                Additional orders purchased after 3
+                                units will be<br>cancelled.</p>
+                        </div>
+                    </div>
+                    <div class="row pt-md-3 pb-1">
+                        <div class="col">
+                            <h6 class="fs-5 black">Select Option</h6>
+                            <p><a href="" class="text-decoration-none">Compare Options <i
+                                        class=" ms-1 fs-6 fa-regular fa-square-plus sicon"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="row px-3 px-md-0">
+                        <div class="col col-12 col-md-10 select active1 pt-4 pb-2 px-4">
+                            <h5 class="black">Shri Mini 3 Pro (SHRI RC-N1)</h5>
+                            <p><a href="" class="text-decoration-none black stretched-link">USD
+                                    &#36;759</a></p>
+                            <hr>
+                            <p class="desc">Includes the SHRI RC-N1 remote controller. Use with your smartphone to
+                                check live
+                                feed
+                                and flight status.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-2 px-3 px-md-0">
+                        <div class="col col-12 col-md-10 select pt-4 pb-2 px-4">
+                            <h5 class="black">Shri Mini 3 Pro (SHRI RC)</h5>
+                            <p><a href="" class="text-decoration-none black stretched-link">USD
+                                    &#36;909</a></p>
+                            <hr>
+                            <p class="desc">Includes the new Shri RC, which has the DJI Fly App pre-installed and a
+                                built-in 5.5-inch HD display for crisp viewing
+                                even in direct sunlight.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-2 px-3 px-md-0">
+                        <div class="col col-12 col-md-10 select  pt-4 pb-2 px-4">
+                            <h5 class="black">Shri Mini 3 Pro (NO RC)</h5>
+                            <p><a href="#" class="text-decoration-none black stretched-link">USD
+                                    &#36;669</a></p>
+                            <hr>
+                            <p class="desc">Does not include a remote controller. You can use the Shri RC-N1 that you
+                                already own.</p>
+                        </div>
+                    </div>
+                    <div class="row pt-md-5 pt-4 pb-1">
+                        <div class="col">
+                            <h6 class="fs-5 black">Don't Miss Top Accessories</h6>
+                        </div>
+                    </div>
+                    <div class="row mt-2 px-3 px-md-0">
+                        <div class="col col-12 col-md-10 select pt-2 pb-2 px-4">
+                            <span>
+                                <input type="checkbox" name="" id="">
+                            </span>
+                            <img src="https://stormsend1.djicdn.com/tpc/uploads/spu/cover/83d450847750419bb115706a3b95b3fa@small.png"
+                                alt="" width="64px" height="64px" class="ms-1">
+                            <h5 class="black">Kingston Canvas Go! PLus microSD Card 128GB</h5>
+                            <p><a href="" class="text-decoration-none black stretched-link">USD
+                                    &#36;25</a></p>
+                            <hr>
+                            <p class="desc">Provides 128GB large capacity for longer 4K video recording time. Supports
+                                read speeds up to 170 MB/s and write speeds
+                                up to 70 MB/s</p>
+                        </div>
+                    </div>
+                    <div class="row mt-2 px-3 px-md-0">
+                        <div class="col col-12 col-md-10 select pt-2 pb-2 px-4">
+                            <span>
+                                <input type="checkbox" name="" id="">
+                            </span>
+                            <img src="https://stormsend1.djicdn.com/tpc/uploads/spu/cover/cf5341e42f2732a6bbd448f4c8dd1db0@small.png"
+                                alt="" width="64px" height="64px" class="ms-3">
+                            <h5 class="black">Shri Mini 3 Pro Fly More Kit Plus</h5>
+                            <p><a href="" class="text-decoration-none black stretched-link">USD
+                                    &#36;249</a></p>
+                            <hr>
+                            <p class="desc">Buy together and save, the kit includes two Intelligent Flight Batteries
+                                Plus (47-min max flight time), a Two-Way
+                                Charging Hub, Shoulder Bag, and more.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-2 px-3 px-md-0">
+                        <div class="col col-12 col-md-10 select pt-2 pb-2 px-4">
+                            <span>
+                                <input type="checkbox" name="" id="">
+                            </span>
+                            <img src="https://stormsend1.djicdn.com/tpc/uploads/spu/cover/cf5341e42f2732a6bbd448f4c8dd1db0@small.png"
+                                alt="" width="64px" height="64px" class="ms-3">
+                            <h5 class="black">Shri Mini 3 Pro Fly More Kit</h5>
+                            <p><a href="" class="text-decoration-none black stretched-link">USD
+                                    &#36;189</a></p>
+                            <hr>
+                            <p class="desc">Buy together and save, the kit includes two Intelligent Flight Batteries
+                                (34-min max flight time), a Two-Way Charging
+                                Hub, Shoulder Bag, and more.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-2 px-3 px-md-0">
+                        <div class="col col-12 col-md-10 select pt-2 pb-2 px-4">
+                            <span>
+                                <input type="checkbox" name="" id="">
+                            </span>
+                            <img src="https://stormsend1.djicdn.com/tpc/uploads/spu/cover/8c16ba95eabe32bb9fa77b6b5ee17e1f@small.png"
+                                alt="" width="64px" height="64px" class="ms-2">
+                            <h5 class="black">Shri Mini 3 Pro Intelligent Flight Battery</h5>
+                            <p><a href="" class="text-decoration-none black stretched-link">USD
+                                    &#36;65</a></p>
+                            <hr>
+                            <p class="desc">34-min max flight time. Be prepared and fly freely with peace of mind.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-md-4 mt-3 pb-3 pb-md-0">
+                        <div class="col">
+                            <hr width="500px" class="mb-4">
+                            <span>
+                                <img src="https://stormsend1.djicdn.com/stormsend/uploads/a37e030b1a93b865e7e092c911a904a3.svg"
+                                    alt="" width="24px" height="24px">
+                            </span>
+                            <p class="d-inline-block desc">Get 1% of your order back in Shri Credit</p>
+                            <br>
+                            <span class="">
+                                <img src="https://stormsend1.djicdn.com/stormsend/uploads/bc337544deb6103fcbb89925640ed17f.svg"
+                                    alt="" width="24px" height="24px">
+                            </span>
+                            <p class="d-inline-block desc">14-Day Return & Refund Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container d-none d-md-block">
+            <div class="row pt-md-5 mt-md-5">
+                <div class="col text-center">
+                    <h5 class="fs-2 black mb-md-5 mb-2">Take a Closer Look</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card text-bg-dark border-0">
+                        <video width="100%" height="100%" loop muted autoplay="autoplay" class="card-img">
+                            <source
+                                src="https://us-cms-videos.dji.net/video_trans/4cacaaeb1c6e4408900c723ca4e40e3b/1080.mp4"
+                                type="video/mp4">
+                        </video>
+                        <div class="card-img-overlay py-5 px-5">
+                            <h5 class="card-title fs-2">Lightweight & Hassle-Free</h5>
+                            <p class="card-text fs-6 fw-semibold">At sub 249 g [1], Mini 3 Pro doesn't require
+                                registration in most
+                                countries. The foldable design also makes it easy to
+                                carry and store.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3 mt-2">
+                <div class="col-5">
+                    <div class="card text-bg-dark border-0">
+                        <img src="https://stormsend1.djicdn.com/tpc/uploads/core_selling_point/image/a0dad0f166dabd1177f5328d797c53c6@origin.jpg"
+                            class="card-img" alt="...">
+                        <div class="card-img-overlay px-4 py-4 black">
+                            <h5 class="card-title fs-3">Sweet Air Time</h5>
+                            <p class="card-text fw-semibold">The standard Intelligent Flight Battery provides up to 34
+                                minutes of
+                                battery life, enough power to cover your aerial
+                                photography needs. [5]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="card text-bg-dark border-0">
+                        <img src="https://stormsend1.djicdn.com/tpc/uploads/core_selling_point/image/28ffe0176719d90d9f37d08057764056@origin.jpg"
+                            class="card-img" alt="...">
+                        <div class="card-img-overlay px-4 py-4 text-white">
+                            <h5 class="card-title fs-3">Next Level Safety</h5>
+                            <p class="card-text">With forward, backward, and downward vision sensors, ToF, and APAS 4.0
+                                [2], Mini 3 Pro can avoid obstacles, even in
+                                complicated environments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3 mt-2">
+                <div class="col-7">
+                    <div class="card text-bg-dark border-0">
+                        <img src="https://stormsend1.djicdn.com/tpc/uploads/core_selling_point/image/b0ce2533821abc9edbe2c1533efd2f85@origin.jpg"
+                            class="card-img" alt="...">
+                        <div class="card-img-overlay px-4 py-4">
+                            <h5 class="card-title fs-3">Pro, and We Mean It</h5>
+                            <p class="card-text fw-semibold">Mini 3 Pro records video at up to 4K/60fps. The 1/1.3-inch
+                                sensor features dual-native ISO and supports the direct
+                                output of HDR footage. [3]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="card text-bg-dark border-0">
+                        <img src="https://stormsend1.djicdn.com/tpc/uploads/core_selling_point/image/be53a48634ba711603d92ceafc82b672@origin.jpg"
+                            class="card-img" alt="...">
+                        <div class="card-img-overlay px-4 py-4 text-white">
+                            <h5 class="card-title fs-3">Intelligent Features in a Tap</h5>
+                            <p class="card-text">Take your creations to new heights with powerful storytelling tools
+                                like FocusTrack [4], MasterShots, and Timelapse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-5 d-none d-md-block">
+            <div class="row pt-5">
+                <div class="col">
+                    hello
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Checkout</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css>
+
+</head>
+<style>
+    .tnav {
+        color: #707473;
+        font-size: 13px;
+    }
+
+    .black {
+        color: #333333;
+    }
+
+    .desc {
+        font-size: 15px;
+        color: #707473;
+    }
+
+    .divideb {
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .qty .count {
+        color: #000;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 20px;
+        font-weight: 700;
+        min-width: 35px;
+        text-align: center;
+    }
+
+    .qty .plus {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        color: white;
+        width: 25px;
+        height: 25px;
+        font: 22px/1 Arial, sans-serif;
+        text-align: center;
+        padding: 2px;
+        border-radius: 50%;
+    }
+
+    .qty .minus {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        color: white;
+        width: 25px;
+        height: 25px;
+        font: 22px/1 Arial, sans-serif;
+        text-align: center;
+        border-radius: 50%;
+        padding: 2px;
+        background-clip: padding-box;
+    }
+
+
+    .minus:hover {
+        background-color: #1890ff !important;
+    }
+
+    .plus:hover {
+        background-color: #1890ff !important;
+    }
+
+    /*Prevent text selection*/
+    span {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    input {
+        border: 0;
+        width: 2%;
+    }
+
+    nput::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input:disabled {
+        background-color: white;
+    }
+
+    .tips {
+        color: #fa8c16;
+        font-size: 12px;
+        border: 1px solid #fa8c16;
+        border-radius: 8px;
+    }
+
+    .coverbtn {
+        border: 1px solid rgb(146, 146, 146);
+        border-radius: 3px;
+        background: transparent;
+        padding: 10px 25px;
+    }
+
+    .coverbtn:hover {
+        border: 1px solid #1890ff;
+        border-radius: 3px;
+        background: transparent;
+        padding: 10px 25px;
+        color: #1890ff;
+    }
+
+    .shop {
+        border-radius: 3px;
+        background-image: linear-gradient(0deg, #1890ff, #40a9ff);
+        padding: 12px 80px;
+        border: 0;
+        color: white;
+    }
+
+    .paypal {
+        border-radius: 3px;
+        background-color: #FFC439;
+        padding: 12px 50px;
+        border: 0;
+        color: black;
+    }
+
+    .bg-foot {
+        background-color: #fff;
+    }
+
+    .ul-custom li {
+        margin-bottom: 1rem;
+        font-size: 12px;
+    }
+
+    .ul-custom li a {
+        color: #6c7073;
+        margin-bottom: 1rem;
+        font-size: 12px;
+    }
+
+    .ul-custom li a:hover {
+        color: #44A8F2;
+    }
+
+    .end {
+        margin-top: 32px;
+    }
+
+    .ebtn {
+        background-color: #6C7073;
+        border: none;
+        padding: 4px 4px;
+    }
+
+    .email {
+        background: transparent;
+        border: 1px solid #494B4D;
+        font-size: 14px;
+        height: 32px;
+        width: 189px;
+        padding-left: 10px;
+    }
+
+    .foot-ul {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .foot-li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .foot-ul li a {
+        color: #6c7073;
+        font-size: 12px;
+    }
+
+    .foot-ul li a:hover {
+        color: #44A8F2;
+    }
+
+    .social a {
+        color: #6c7073;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .social a:hover {
+        color: #44A8F2;
+    }
+
+    .list-inline li a {
+        color: #6c7073;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .list-inline li a:hover {
+        color: #44A8F2;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+    .cstm {
+        color: #6c7073;
+    }
+</style>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand-lg bg-white border-bottom">
+            <div class="container">
+                <button class="navbar-toggler me-4 outline-0 border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasTop" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="offcanvasTop">
+                    <span><span><i class="fa-solid fa-bars text-black"></i></span></span>
+                </button>
+                <a class="navbar-brand me-auto me-md-0 ms-5 ms-md-0" href="#">
+                    <picture>
+                        <source srcset="images/storem.png" media="(max-width: 576px)">
+                        <img src="images/store.png" alt="...">
+                    </picture>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <div class="col text-end">
+                        <p class=" d-inline-block mb-0"><a href="" class="text-decoration-none tnav">Sign In</a></p>
+                        <span class="ms-3 tnav">|</span>
+                        <p class=" d-inline-block ms-3 mb-0"><a href="" class="text-decoration-none tnav">Sign Up</a>
+                        </p>
+                        <span class="ms-3 tnav">|</span>
+                        <span class="lang ms-3"><a href="" class=" clr-foot"><i class="tnav fa-solid fa-globe"></i>
+                                <h6 class="d-inline-block tnav">United States/English</h6>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container py-md-4 mt-md-2 py-3">
+            <div class="row text-start">
+                <div class="col">
+                    <h5 class="fs-2 black">My Shopping Cart</h5>
+                    <p class="desc mt-3">Log in to synchronize the items in your shopping cart.<span class="ms-3"><a
+                                href="" class="text-decoration-none">Login
+                                Now</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="row py-md-4 divideb">
+                <div class="col-5 desc text-start">Item</div>
+                <div class="col-2 desc d-none d-md-block">Item Price</div>
+                <div class="col-2 desc d-none d-md-block">Quantity</div>
+                <div class="col-2 desc">Price</div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row py-md-2 divideb">
+                <div class="col-5 text-start">
+                    <span><i class="bi bi-check-square-fill text-primary fs-4"></i></span>
+                    <span class="ms-md-3">
+                        <img src="https://stormsend1.djicdn.com/tpc/uploads/spu/cover/6486fa153ef507ae70987978b9812ece@small.png"
+                            alt="" width="128px" height="128px">
+                        <span class="black fs-5 fw-semibold ms-md-3">Shri Mini 3 Pro (SHRI RC-N1)</span>
+                    </span>
+                </div>
+                <div class="col-2 mt-5 d-none d-md-block">
+                    <span>USD &#36;759</span>
+                </div>
+                <div class="col-2 desc d-none d-md-block">
+                    <div class="qty mt-5">
+                        <span class="minus bg-dark mt-1">-</span>
+                        <input type="number" class="count" name="qty" value="1">
+                        <span class="plus bg-dark mt-1">+</span>
+                    </div>
+                </div>
+                <div class="col-2 mt-5">
+                    <span class="fw-semibold">USD &#36;759</span>
+                </div>
+                <div class="col-1 mt-5"><a href="" class="text-decoration-none text-black"><i
+                            class="bi bi-trash"></i></a></div>
+            </div>
+            <div class="row py-md-4 divideb">
+                <div class="col-5 desc text-start">
+                    <span class="ms-5 ps-md-3">
+                        <img src="https://stormsend1.djicdn.com/tpc/uploads/spu/cover/1194071ff78846a7dfec4c392608823e@small.png"
+                            alt="" width="85px" height="85px">
+                    </span>
+                    <span class="tips p-1 px-2 ms-md-4">Free Gift</span>
+                    <span class="black fw-semibold ms-2">Shri Shoulder Bag</span>
+                </div>
+                <div class="col-2 desc"></div>
+                <div class="col-2  mt-4">x 1</div>
+                <div class="col-2 desc"></div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row py-md-4 divideb">
+                <div class="col-5 desc text-start">
+                    <span class="ms-5 ps-md-3">
+                        <img src="https://stormsend1.djicdn.com/tpc/uploads/spu/cover/4aa23ff245f4313e535fe4774a4dfe77@small.png"
+                            alt="" width="85px" height="85px">
+                    </span>
+                    <span class="black fw-semibold ms-md-3">Shri Care Refresh 2-Year Plan (Shri Mini 3 Pro)</span>
+                </div>
+                <div class="col-2 mt-md-4"><span>USD &#36;759</span></div>
+                <div class="col-2  mt-4">x 1</div>
+                <div class="col-2 mt-md-4"><span class="fw-semibold">USD &#36;759</span></div>
+                <div class="col-1 mt-md-4"><a href="" class="text-decoration-none text-black"><i
+                            class="bi bi-trash"></i></a></div>
+            </div>
+            <div class="row divideb py-md-4">
+                <div class="col">
+                    <div class="row py-md-1">
+                        <div class="col">
+                            <span><i class="bi bi-image desc"></i></span>
+                            <span class="ms-md-4">Enjoy a 1% rebate on every purchase in the form of Shri Credit</span>
+                            <p><a href="" class="text-decoration-none ms-md-5">Learn more about Shri Credit</a></p>
+                        </div>
+                    </div>
+                    <div class="row py-md-1">
+                        <div class="col">
+                            <span><i class="bi bi-ticket-detailed desc fs-5"></i></span>
+                            <span class="ms-md-4">Have a Coupon Code?</span>
+                            <p class="desc ms-md-5">Proceed to checkout to use Coupons and DJI Credits</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-end">
+                    <span class="black fs-4">CART SUBTOTAL:<span class="fw-semibold black ms-md-3">USD
+                            &#36;884</span></span>
+                    <p class="desc py-md-2 mb-0">Tax:<span class="ms-md-3 text-black">Calculated at checkout</span><i
+                            class="bi bi-question-circle ms-md-3"></i></p>
+                    <p class="desc">Shipping:<span class="ms-md-3 text-black">Free</span></p>
+                    <span><img
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAzMiIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCIgeG1sbnM9Imh0dHA6JiN4MkY7JiN4MkY7d3d3LnczLm9yZyYjeDJGOzIwMDAmI3gyRjtzdmciPjxwYXRoIGZpbGw9IiMwMDljZGUiIG9wYWNpdHk9IjEiIGQ9Ik0gMjAuOTI0IDcuMTU3IEMgMjEuMjA0IDUuMDU3IDIwLjkyNCAzLjY1NyAxOS44MDEgMi4zNTcgQyAxOC41ODMgMC45NTcgMTYuNDMgMC4yNTcgMTMuNzE2IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNzU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA2LjY5NCAyNi41NTcgQyA2LjYgMjYuOTU3IDYuODgxIDI3LjI1NyA3LjI1NSAyNy4yNTcgTCAxMS4zNzUgMjcuMjU3IEMgMTEuODQ0IDI3LjI1NyAxMi4zMTEgMjYuOTU3IDEyLjQwNSAyNi40NTcgTCAxMi40MDUgMjYuMTU3IEwgMTMuMjQ3IDIwLjk1NyBMIDEzLjI0NyAyMC43NTcgQyAxMy4zNDEgMjAuMjU3IDEzLjgwOSAxOS44NTcgMTQuMjc3IDE5Ljg1NyBMIDE0Ljg0IDE5Ljg1NyBDIDE4Ljg2NCAxOS44NTcgMjEuOTU0IDE4LjE1NyAyMi44OSAxMy4xNTcgQyAyMy4zNTggMTEuMDU3IDIzLjE3MiA5LjM1NyAyMi4wNDggOC4xNTcgQyAyMS43NjcgNy43NTcgMjEuMjk4IDcuNDU3IDIwLjkyNCA3LjE1NyBMIDIwLjkyNCA3LjE1NyI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMTIxNjkiIG9wYWNpdHk9IjEiIGQ9Ik0gMjAuOTI0IDcuMTU3IEMgMjEuMjA0IDUuMDU3IDIwLjkyNCAzLjY1NyAxOS44MDEgMi4zNTcgQyAxOC41ODMgMC45NTcgMTYuNDMgMC4yNTcgMTMuNzE2IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNzU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA4LjI4NiAxNi4wNTcgTCA4LjE5MiAxNi4zNTcgQyA4LjI4NiAxNS43NTcgOC43NTQgMTUuMzU3IDkuMzE1IDE1LjM1NyBMIDExLjY1NSAxNS4zNTcgQyAxNi4yNDMgMTUuMzU3IDE5LjgwMSAxMy4zNTcgMjAuOTI0IDcuNzU3IEMgMjAuODMxIDcuNDU3IDIwLjkyNCA3LjM1NyAyMC45MjQgNy4xNTciPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBvcGFjaXR5PSIxIiBkPSJNIDkuNTA0IDcuMTU3IEMgOS41OTYgNi44NTcgOS43ODQgNi41NTcgMTAuMDY1IDYuMzU3IEMgMTAuMjUxIDYuMzU3IDEwLjM0NSA2LjI1NyAxMC41MzIgNi4yNTcgTCAxNi43MTEgNi4yNTcgQyAxNy40NjEgNi4yNTcgMTguMjA4IDYuMzU3IDE4Ljc3MiA2LjQ1NyBDIDE4Ljk1OCA2LjQ1NyAxOS4xNDYgNi40NTcgMTkuMzMzIDYuNTU3IEMgMTkuNTIgNi42NTcgMTkuNzA3IDYuNjU3IDE5LjgwMSA2Ljc1NyBDIDE5Ljg5NCA2Ljc1NyAxOS45ODcgNi43NTcgMjAuMDgyIDYuNzU3IEMgMjAuMzYyIDYuODU3IDIwLjY0MyA3LjA1NyAyMC45MjQgNy4xNTcgQyAyMS4yMDQgNS4wNTcgMjAuOTI0IDMuNjU3IDE5LjgwMSAyLjI1NyBDIDE4LjY3NyAwLjg1NyAxNi41MjUgMC4yNTcgMTMuODA5IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNjU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA4LjI4NiAxNi4wNTcgTCA5LjUwNCA3LjE1NyBaIj48L3BhdGg+PC9zdmc+"
+                            alt="" height="20px" width="20px"></span>
+                    <span><img
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAxcHgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxMDEgMzIiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHhtbG5zPSJodHRwOiYjeDJGOyYjeDJGO3d3dy53My5vcmcmI3gyRjsyMDAwJiN4MkY7c3ZnIj48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDEyLjIzNyAyLjggTCA0LjQzNyAyLjggQyAzLjkzNyAyLjggMy40MzcgMy4yIDMuMzM3IDMuNyBMIDAuMjM3IDIzLjcgQyAwLjEzNyAyNC4xIDAuNDM3IDI0LjQgMC44MzcgMjQuNCBMIDQuNTM3IDI0LjQgQyA1LjAzNyAyNC40IDUuNTM3IDI0IDUuNjM3IDIzLjUgTCA2LjQzNyAxOC4xIEMgNi41MzcgMTcuNiA2LjkzNyAxNy4yIDcuNTM3IDE3LjIgTCAxMC4wMzcgMTcuMiBDIDE1LjEzNyAxNy4yIDE4LjEzNyAxNC43IDE4LjkzNyA5LjggQyAxOS4yMzcgNy43IDE4LjkzNyA2IDE3LjkzNyA0LjggQyAxNi44MzcgMy41IDE0LjgzNyAyLjggMTIuMjM3IDIuOCBaIE0gMTMuMTM3IDEwLjEgQyAxMi43MzcgMTIuOSAxMC41MzcgMTIuOSA4LjUzNyAxMi45IEwgNy4zMzcgMTIuOSBMIDguMTM3IDcuNyBDIDguMTM3IDcuNCA4LjQzNyA3LjIgOC43MzcgNy4yIEwgOS4yMzcgNy4yIEMgMTAuNjM3IDcuMiAxMS45MzcgNy4yIDEyLjYzNyA4IEMgMTMuMTM3IDguNCAxMy4zMzcgOS4xIDEzLjEzNyAxMC4xIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDM1LjQzNyAxMCBMIDMxLjczNyAxMCBDIDMxLjQzNyAxMCAzMS4xMzcgMTAuMiAzMS4xMzcgMTAuNSBMIDMwLjkzNyAxMS41IEwgMzAuNjM3IDExLjEgQyAyOS44MzcgOS45IDI4LjAzNyA5LjUgMjYuMjM3IDkuNSBDIDIyLjEzNyA5LjUgMTguNjM3IDEyLjYgMTcuOTM3IDE3IEMgMTcuNTM3IDE5LjIgMTguMDM3IDIxLjMgMTkuMzM3IDIyLjcgQyAyMC40MzcgMjQgMjIuMTM3IDI0LjYgMjQuMDM3IDI0LjYgQyAyNy4zMzcgMjQuNiAyOS4yMzcgMjIuNSAyOS4yMzcgMjIuNSBMIDI5LjAzNyAyMy41IEMgMjguOTM3IDIzLjkgMjkuMjM3IDI0LjMgMjkuNjM3IDI0LjMgTCAzMy4wMzcgMjQuMyBDIDMzLjUzNyAyNC4zIDM0LjAzNyAyMy45IDM0LjEzNyAyMy40IEwgMzYuMTM3IDEwLjYgQyAzNi4yMzcgMTAuNCAzNS44MzcgMTAgMzUuNDM3IDEwIFogTSAzMC4zMzcgMTcuMiBDIDI5LjkzNyAxOS4zIDI4LjMzNyAyMC44IDI2LjEzNyAyMC44IEMgMjUuMDM3IDIwLjggMjQuMjM3IDIwLjUgMjMuNjM3IDE5LjggQyAyMy4wMzcgMTkuMSAyMi44MzcgMTguMiAyMy4wMzcgMTcuMiBDIDIzLjMzNyAxNS4xIDI1LjEzNyAxMy42IDI3LjIzNyAxMy42IEMgMjguMzM3IDEzLjYgMjkuMTM3IDE0IDI5LjczNyAxNC42IEMgMzAuMjM3IDE1LjMgMzAuNDM3IDE2LjIgMzAuMzM3IDE3LjIgWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMDMwODciIGQ9Ik0gNTUuMzM3IDEwIEwgNTEuNjM3IDEwIEMgNTEuMjM3IDEwIDUwLjkzNyAxMC4yIDUwLjczNyAxMC41IEwgNDUuNTM3IDE4LjEgTCA0My4zMzcgMTAuOCBDIDQzLjIzNyAxMC4zIDQyLjczNyAxMCA0Mi4zMzcgMTAgTCAzOC42MzcgMTAgQyAzOC4yMzcgMTAgMzcuODM3IDEwLjQgMzguMDM3IDEwLjkgTCA0Mi4xMzcgMjMgTCAzOC4yMzcgMjguNCBDIDM3LjkzNyAyOC44IDM4LjIzNyAyOS40IDM4LjczNyAyOS40IEwgNDIuNDM3IDI5LjQgQyA0Mi44MzcgMjkuNCA0My4xMzcgMjkuMiA0My4zMzcgMjguOSBMIDU1LjgzNyAxMC45IEMgNTYuMTM3IDEwLjYgNTUuODM3IDEwIDU1LjMzNyAxMCBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA2Ny43MzcgMi44IEwgNTkuOTM3IDIuOCBDIDU5LjQzNyAyLjggNTguOTM3IDMuMiA1OC44MzcgMy43IEwgNTUuNzM3IDIzLjYgQyA1NS42MzcgMjQgNTUuOTM3IDI0LjMgNTYuMzM3IDI0LjMgTCA2MC4zMzcgMjQuMyBDIDYwLjczNyAyNC4zIDYxLjAzNyAyNCA2MS4wMzcgMjMuNyBMIDYxLjkzNyAxOCBDIDYyLjAzNyAxNy41IDYyLjQzNyAxNy4xIDYzLjAzNyAxNy4xIEwgNjUuNTM3IDE3LjEgQyA3MC42MzcgMTcuMSA3My42MzcgMTQuNiA3NC40MzcgOS43IEMgNzQuNzM3IDcuNiA3NC40MzcgNS45IDczLjQzNyA0LjcgQyA3Mi4yMzcgMy41IDcwLjMzNyAyLjggNjcuNzM3IDIuOCBaIE0gNjguNjM3IDEwLjEgQyA2OC4yMzcgMTIuOSA2Ni4wMzcgMTIuOSA2NC4wMzcgMTIuOSBMIDYyLjgzNyAxMi45IEwgNjMuNjM3IDcuNyBDIDYzLjYzNyA3LjQgNjMuOTM3IDcuMiA2NC4yMzcgNy4yIEwgNjQuNzM3IDcuMiBDIDY2LjEzNyA3LjIgNjcuNDM3IDcuMiA2OC4xMzcgOCBDIDY4LjYzNyA4LjQgNjguNzM3IDkuMSA2OC42MzcgMTAuMSBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5MC45MzcgMTAgTCA4Ny4yMzcgMTAgQyA4Ni45MzcgMTAgODYuNjM3IDEwLjIgODYuNjM3IDEwLjUgTCA4Ni40MzcgMTEuNSBMIDg2LjEzNyAxMS4xIEMgODUuMzM3IDkuOSA4My41MzcgOS41IDgxLjczNyA5LjUgQyA3Ny42MzcgOS41IDc0LjEzNyAxMi42IDczLjQzNyAxNyBDIDczLjAzNyAxOS4yIDczLjUzNyAyMS4zIDc0LjgzNyAyMi43IEMgNzUuOTM3IDI0IDc3LjYzNyAyNC42IDc5LjUzNyAyNC42IEMgODIuODM3IDI0LjYgODQuNzM3IDIyLjUgODQuNzM3IDIyLjUgTCA4NC41MzcgMjMuNSBDIDg0LjQzNyAyMy45IDg0LjczNyAyNC4zIDg1LjEzNyAyNC4zIEwgODguNTM3IDI0LjMgQyA4OS4wMzcgMjQuMyA4OS41MzcgMjMuOSA4OS42MzcgMjMuNCBMIDkxLjYzNyAxMC42IEMgOTEuNjM3IDEwLjQgOTEuMzM3IDEwIDkwLjkzNyAxMCBaIE0gODUuNzM3IDE3LjIgQyA4NS4zMzcgMTkuMyA4My43MzcgMjAuOCA4MS41MzcgMjAuOCBDIDgwLjQzNyAyMC44IDc5LjYzNyAyMC41IDc5LjAzNyAxOS44IEMgNzguNDM3IDE5LjEgNzguMjM3IDE4LjIgNzguNDM3IDE3LjIgQyA3OC43MzcgMTUuMSA4MC41MzcgMTMuNiA4Mi42MzcgMTMuNiBDIDgzLjczNyAxMy42IDg0LjUzNyAxNCA4NS4xMzcgMTQuNiBDIDg1LjczNyAxNS4zIDg1LjkzNyAxNi4yIDg1LjczNyAxNy4yIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDA5Y2RlIiBkPSJNIDk1LjMzNyAzLjMgTCA5Mi4xMzcgMjMuNiBDIDkyLjAzNyAyNCA5Mi4zMzcgMjQuMyA5Mi43MzcgMjQuMyBMIDk1LjkzNyAyNC4zIEMgOTYuNDM3IDI0LjMgOTYuOTM3IDIzLjkgOTcuMDM3IDIzLjQgTCAxMDAuMjM3IDMuNSBDIDEwMC4zMzcgMy4xIDEwMC4wMzcgMi44IDk5LjYzNyAyLjggTCA5Ni4wMzcgMi44IEMgOTUuNjM3IDIuOCA5NS40MzcgMyA5NS4zMzcgMy4zIFoiPjwvcGF0aD48L3N2Zz4"
+                            alt="" height="20px" width="70px"></span>
+                    <p class="d-inline-block mb-0">$44.12/mo for 24 months. As low as 0% APR for 6 or 12 months.</p>
+                    <a href="" class="text-decoration-none d-block">Learn
+                        More</a>
+
+                </div>
+            </div>
+            <div class="row py-md-4 divideb">
+                <div class="col">
+                    <button class="coverbtn">Continue Without Coverage</button>
+                </div>
+                <div class="col text-end">
+                    <button class="paypal me-3">
+                        <span><img
+                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAzMiIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCIgeG1sbnM9Imh0dHA6JiN4MkY7JiN4MkY7d3d3LnczLm9yZyYjeDJGOzIwMDAmI3gyRjtzdmciPjxwYXRoIGZpbGw9IiMwMDljZGUiIG9wYWNpdHk9IjEiIGQ9Ik0gMjAuOTI0IDcuMTU3IEMgMjEuMjA0IDUuMDU3IDIwLjkyNCAzLjY1NyAxOS44MDEgMi4zNTcgQyAxOC41ODMgMC45NTcgMTYuNDMgMC4yNTcgMTMuNzE2IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNzU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA2LjY5NCAyNi41NTcgQyA2LjYgMjYuOTU3IDYuODgxIDI3LjI1NyA3LjI1NSAyNy4yNTcgTCAxMS4zNzUgMjcuMjU3IEMgMTEuODQ0IDI3LjI1NyAxMi4zMTEgMjYuOTU3IDEyLjQwNSAyNi40NTcgTCAxMi40MDUgMjYuMTU3IEwgMTMuMjQ3IDIwLjk1NyBMIDEzLjI0NyAyMC43NTcgQyAxMy4zNDEgMjAuMjU3IDEzLjgwOSAxOS44NTcgMTQuMjc3IDE5Ljg1NyBMIDE0Ljg0IDE5Ljg1NyBDIDE4Ljg2NCAxOS44NTcgMjEuOTU0IDE4LjE1NyAyMi44OSAxMy4xNTcgQyAyMy4zNTggMTEuMDU3IDIzLjE3MiA5LjM1NyAyMi4wNDggOC4xNTcgQyAyMS43NjcgNy43NTcgMjEuMjk4IDcuNDU3IDIwLjkyNCA3LjE1NyBMIDIwLjkyNCA3LjE1NyI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMTIxNjkiIG9wYWNpdHk9IjEiIGQ9Ik0gMjAuOTI0IDcuMTU3IEMgMjEuMjA0IDUuMDU3IDIwLjkyNCAzLjY1NyAxOS44MDEgMi4zNTcgQyAxOC41ODMgMC45NTcgMTYuNDMgMC4yNTcgMTMuNzE2IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNzU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA4LjI4NiAxNi4wNTcgTCA4LjE5MiAxNi4zNTcgQyA4LjI4NiAxNS43NTcgOC43NTQgMTUuMzU3IDkuMzE1IDE1LjM1NyBMIDExLjY1NSAxNS4zNTcgQyAxNi4yNDMgMTUuMzU3IDE5LjgwMSAxMy4zNTcgMjAuOTI0IDcuNzU3IEMgMjAuODMxIDcuNDU3IDIwLjkyNCA3LjM1NyAyMC45MjQgNy4xNTciPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBvcGFjaXR5PSIxIiBkPSJNIDkuNTA0IDcuMTU3IEMgOS41OTYgNi44NTcgOS43ODQgNi41NTcgMTAuMDY1IDYuMzU3IEMgMTAuMjUxIDYuMzU3IDEwLjM0NSA2LjI1NyAxMC41MzIgNi4yNTcgTCAxNi43MTEgNi4yNTcgQyAxNy40NjEgNi4yNTcgMTguMjA4IDYuMzU3IDE4Ljc3MiA2LjQ1NyBDIDE4Ljk1OCA2LjQ1NyAxOS4xNDYgNi40NTcgMTkuMzMzIDYuNTU3IEMgMTkuNTIgNi42NTcgMTkuNzA3IDYuNjU3IDE5LjgwMSA2Ljc1NyBDIDE5Ljg5NCA2Ljc1NyAxOS45ODcgNi43NTcgMjAuMDgyIDYuNzU3IEMgMjAuMzYyIDYuODU3IDIwLjY0MyA3LjA1NyAyMC45MjQgNy4xNTcgQyAyMS4yMDQgNS4wNTcgMjAuOTI0IDMuNjU3IDE5LjgwMSAyLjI1NyBDIDE4LjY3NyAwLjg1NyAxNi41MjUgMC4yNTcgMTMuODA5IDAuMjU3IEwgNS43NTggMC4yNTcgQyA1LjI5IDAuMjU3IDQuNzI5IDAuNjU3IDQuNjM0IDEuMjU3IEwgMS4zNTggMjMuNDU3IEMgMS4zNTggMjMuODU3IDEuNjM5IDI0LjM1NyAyLjEwNyAyNC4zNTcgTCA2Ljk3NSAyNC4zNTcgTCA4LjI4NiAxNi4wNTcgTCA5LjUwNCA3LjE1NyBaIj48L3BhdGg+PC9zdmc+"
+                                alt="" height="30px" width="30px"></span>
+                        <span><img
+                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAxcHgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxMDEgMzIiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHhtbG5zPSJodHRwOiYjeDJGOyYjeDJGO3d3dy53My5vcmcmI3gyRjsyMDAwJiN4MkY7c3ZnIj48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDEyLjIzNyAyLjggTCA0LjQzNyAyLjggQyAzLjkzNyAyLjggMy40MzcgMy4yIDMuMzM3IDMuNyBMIDAuMjM3IDIzLjcgQyAwLjEzNyAyNC4xIDAuNDM3IDI0LjQgMC44MzcgMjQuNCBMIDQuNTM3IDI0LjQgQyA1LjAzNyAyNC40IDUuNTM3IDI0IDUuNjM3IDIzLjUgTCA2LjQzNyAxOC4xIEMgNi41MzcgMTcuNiA2LjkzNyAxNy4yIDcuNTM3IDE3LjIgTCAxMC4wMzcgMTcuMiBDIDE1LjEzNyAxNy4yIDE4LjEzNyAxNC43IDE4LjkzNyA5LjggQyAxOS4yMzcgNy43IDE4LjkzNyA2IDE3LjkzNyA0LjggQyAxNi44MzcgMy41IDE0LjgzNyAyLjggMTIuMjM3IDIuOCBaIE0gMTMuMTM3IDEwLjEgQyAxMi43MzcgMTIuOSAxMC41MzcgMTIuOSA4LjUzNyAxMi45IEwgNy4zMzcgMTIuOSBMIDguMTM3IDcuNyBDIDguMTM3IDcuNCA4LjQzNyA3LjIgOC43MzcgNy4yIEwgOS4yMzcgNy4yIEMgMTAuNjM3IDcuMiAxMS45MzcgNy4yIDEyLjYzNyA4IEMgMTMuMTM3IDguNCAxMy4zMzcgOS4xIDEzLjEzNyAxMC4xIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDM1LjQzNyAxMCBMIDMxLjczNyAxMCBDIDMxLjQzNyAxMCAzMS4xMzcgMTAuMiAzMS4xMzcgMTAuNSBMIDMwLjkzNyAxMS41IEwgMzAuNjM3IDExLjEgQyAyOS44MzcgOS45IDI4LjAzNyA5LjUgMjYuMjM3IDkuNSBDIDIyLjEzNyA5LjUgMTguNjM3IDEyLjYgMTcuOTM3IDE3IEMgMTcuNTM3IDE5LjIgMTguMDM3IDIxLjMgMTkuMzM3IDIyLjcgQyAyMC40MzcgMjQgMjIuMTM3IDI0LjYgMjQuMDM3IDI0LjYgQyAyNy4zMzcgMjQuNiAyOS4yMzcgMjIuNSAyOS4yMzcgMjIuNSBMIDI5LjAzNyAyMy41IEMgMjguOTM3IDIzLjkgMjkuMjM3IDI0LjMgMjkuNjM3IDI0LjMgTCAzMy4wMzcgMjQuMyBDIDMzLjUzNyAyNC4zIDM0LjAzNyAyMy45IDM0LjEzNyAyMy40IEwgMzYuMTM3IDEwLjYgQyAzNi4yMzcgMTAuNCAzNS44MzcgMTAgMzUuNDM3IDEwIFogTSAzMC4zMzcgMTcuMiBDIDI5LjkzNyAxOS4zIDI4LjMzNyAyMC44IDI2LjEzNyAyMC44IEMgMjUuMDM3IDIwLjggMjQuMjM3IDIwLjUgMjMuNjM3IDE5LjggQyAyMy4wMzcgMTkuMSAyMi44MzcgMTguMiAyMy4wMzcgMTcuMiBDIDIzLjMzNyAxNS4xIDI1LjEzNyAxMy42IDI3LjIzNyAxMy42IEMgMjguMzM3IDEzLjYgMjkuMTM3IDE0IDI5LjczNyAxNC42IEMgMzAuMjM3IDE1LjMgMzAuNDM3IDE2LjIgMzAuMzM3IDE3LjIgWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMDMwODciIGQ9Ik0gNTUuMzM3IDEwIEwgNTEuNjM3IDEwIEMgNTEuMjM3IDEwIDUwLjkzNyAxMC4yIDUwLjczNyAxMC41IEwgNDUuNTM3IDE4LjEgTCA0My4zMzcgMTAuOCBDIDQzLjIzNyAxMC4zIDQyLjczNyAxMCA0Mi4zMzcgMTAgTCAzOC42MzcgMTAgQyAzOC4yMzcgMTAgMzcuODM3IDEwLjQgMzguMDM3IDEwLjkgTCA0Mi4xMzcgMjMgTCAzOC4yMzcgMjguNCBDIDM3LjkzNyAyOC44IDM4LjIzNyAyOS40IDM4LjczNyAyOS40IEwgNDIuNDM3IDI5LjQgQyA0Mi44MzcgMjkuNCA0My4xMzcgMjkuMiA0My4zMzcgMjguOSBMIDU1LjgzNyAxMC45IEMgNTYuMTM3IDEwLjYgNTUuODM3IDEwIDU1LjMzNyAxMCBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA2Ny43MzcgMi44IEwgNTkuOTM3IDIuOCBDIDU5LjQzNyAyLjggNTguOTM3IDMuMiA1OC44MzcgMy43IEwgNTUuNzM3IDIzLjYgQyA1NS42MzcgMjQgNTUuOTM3IDI0LjMgNTYuMzM3IDI0LjMgTCA2MC4zMzcgMjQuMyBDIDYwLjczNyAyNC4zIDYxLjAzNyAyNCA2MS4wMzcgMjMuNyBMIDYxLjkzNyAxOCBDIDYyLjAzNyAxNy41IDYyLjQzNyAxNy4xIDYzLjAzNyAxNy4xIEwgNjUuNTM3IDE3LjEgQyA3MC42MzcgMTcuMSA3My42MzcgMTQuNiA3NC40MzcgOS43IEMgNzQuNzM3IDcuNiA3NC40MzcgNS45IDczLjQzNyA0LjcgQyA3Mi4yMzcgMy41IDcwLjMzNyAyLjggNjcuNzM3IDIuOCBaIE0gNjguNjM3IDEwLjEgQyA2OC4yMzcgMTIuOSA2Ni4wMzcgMTIuOSA2NC4wMzcgMTIuOSBMIDYyLjgzNyAxMi45IEwgNjMuNjM3IDcuNyBDIDYzLjYzNyA3LjQgNjMuOTM3IDcuMiA2NC4yMzcgNy4yIEwgNjQuNzM3IDcuMiBDIDY2LjEzNyA3LjIgNjcuNDM3IDcuMiA2OC4xMzcgOCBDIDY4LjYzNyA4LjQgNjguNzM3IDkuMSA2OC42MzcgMTAuMSBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5MC45MzcgMTAgTCA4Ny4yMzcgMTAgQyA4Ni45MzcgMTAgODYuNjM3IDEwLjIgODYuNjM3IDEwLjUgTCA4Ni40MzcgMTEuNSBMIDg2LjEzNyAxMS4xIEMgODUuMzM3IDkuOSA4My41MzcgOS41IDgxLjczNyA5LjUgQyA3Ny42MzcgOS41IDc0LjEzNyAxMi42IDczLjQzNyAxNyBDIDczLjAzNyAxOS4yIDczLjUzNyAyMS4zIDc0LjgzNyAyMi43IEMgNzUuOTM3IDI0IDc3LjYzNyAyNC42IDc5LjUzNyAyNC42IEMgODIuODM3IDI0LjYgODQuNzM3IDIyLjUgODQuNzM3IDIyLjUgTCA4NC41MzcgMjMuNSBDIDg0LjQzNyAyMy45IDg0LjczNyAyNC4zIDg1LjEzNyAyNC4zIEwgODguNTM3IDI0LjMgQyA4OS4wMzcgMjQuMyA4OS41MzcgMjMuOSA4OS42MzcgMjMuNCBMIDkxLjYzNyAxMC42IEMgOTEuNjM3IDEwLjQgOTEuMzM3IDEwIDkwLjkzNyAxMCBaIE0gODUuNzM3IDE3LjIgQyA4NS4zMzcgMTkuMyA4My43MzcgMjAuOCA4MS41MzcgMjAuOCBDIDgwLjQzNyAyMC44IDc5LjYzNyAyMC41IDc5LjAzNyAxOS44IEMgNzguNDM3IDE5LjEgNzguMjM3IDE4LjIgNzguNDM3IDE3LjIgQyA3OC43MzcgMTUuMSA4MC41MzcgMTMuNiA4Mi42MzcgMTMuNiBDIDgzLjczNyAxMy42IDg0LjUzNyAxNCA4NS4xMzcgMTQuNiBDIDg1LjczNyAxNS4zIDg1LjkzNyAxNi4yIDg1LjczNyAxNy4yIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDA5Y2RlIiBkPSJNIDk1LjMzNyAzLjMgTCA5Mi4xMzcgMjMuNiBDIDkyLjAzNyAyNCA5Mi4zMzcgMjQuMyA5Mi43MzcgMjQuMyBMIDk1LjkzNyAyNC4zIEMgOTYuNDM3IDI0LjMgOTYuOTM3IDIzLjkgOTcuMDM3IDIzLjQgTCAxMDAuMjM3IDMuNSBDIDEwMC4zMzcgMy4xIDEwMC4wMzcgMi44IDk5LjYzNyAyLjggTCA5Ni4wMzcgMi44IEMgOTUuNjM3IDIuOCA5NS40MzcgMyA5NS4zMzcgMy4zIFoiPjwvcGF0aD48L3N2Zz4"
+                                alt="" height="25px" width="75px"></span>
+                        Checkout
+                    </button>
+                    <button class="shop">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+        <div class="container-fluid bg-foot py-5 d-block d-md-block">
+            <div class="container pt-4">
+                <div class="row mb-5">
+                    <div class="col text-center">
+                        <i class="fa-solid fa-truck-fast fs-1"></i>
+                        <p class="fs-6 cstm mt-3">Free shipping on orders over USD &#36;149 </p>
+                    </div>
+                    <div class="col text-center">
+                        <i class="fa-regular fa-credit-card fs-1"></i>
+                        <p class="fs-6 cstm mt-3">We accept credit cards, PayPal, and bank wires</p>
+                    </div>
+                    <div class="col text-center">
+                        <i class="fa-regular fa-message fs-1"></i>
+                        <p class="fs-6 cstm mt-3">Order Service: <a href="" class="text-decoration-none">Live Chat</a>
+                        </p>
+                    </div>
+                    <hr class="mt-5">
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <ul class="ul-custom list-unstyled">
+                            <h6 class="text-black mb-3">Product Categories</h6>
+                            <li><a href="" class="text-decoration-none">Camera Drones</a></li>
+                            <li><a href="" class="text-decoration-none">Handheld</a></li>
+                            <li><a href="" class="text-decoration-none">Education & Industry</a></li>
+                            <li><a href="" class="text-decoration-none">Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="col text-black">
+                        <ul class="ul-custom list-unstyled">
+                            <h6 class="text-black mb-3">Help & Support</h6>
+                            <li><a href="" class="text-decoration-none">Payment Methods</a></li>
+                            <li><a href="" class="text-decoration-none">Order Information</a></li>
+                            <li><a href="" class="text-decoration-none">Shipping & Delivery</a></li>
+                            <li><a href="" class="text-decoration-none">Return Policy</a></li>
+                            <li><a href="" class="text-decoration-none">Technical Support</a></li>
+                            <li><a href="" class="text-decoration-none">Repair Services</a></li>
+                            <li><a href="" class="text-decoration-none">After-Sales Servicies Policies</a></li>
+                        </ul>
+                    </div>
+                    <div class="col text-black">
+                        <ul class="ul-custom list-unstyled">
+                            <h6 class="text-black mb-3">Programs</h6>
+                            <li><a href="" class="text-decoration-none">Shri Credit</a></li>
+                            <li><a href="" class="text-decoration-none">Refurbished Products</a></li>
+                            <li><a href="" class="text-decoration-none">Shri Store App</a></li>
+                        </ul>
+                    </div>
+                    <div class="col text-black">
+                        <ul class="ul-custom list-unstyled">
+                            <h6 class="text-black mb-3">Explore</h6>
+                            <li><a href="" class="text-decoration-none">Sky Pixel</a></li>
+                            <li><a href="" class="text-decoration-none">Shri Forum</a></li>
+                            <li><a href="" class="text-decoration-none">Buying Guides</a></li>
+
+                            <li><a href="" class="text-decoration-none">Fly Safe</a></li>
+
+                            <li><a href="" class="text-decoration-none">Shri Flying Tips</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col text-black">
+                        <ul class="ul-custom list-unstyled">
+                            <h6 class="end text-black mb-3 mt-0">Subscribe</h6>
+                            <li class="cstm">Be the first to find out about our<br> newest offerings and hottest<br>
+                                deals, and
+                                what’s new.</li>
+                            <input type="search" placeholder="Your Email Address" class="email"><button class="ebtn"><i
+                                    class="fa-regular fa-envelope text-white"></i></button>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="row mt-5">
+                        <div class="col-9">
+                            <a href=""><img src="images/logobm.png" alt=""></a>
+                            <ul class="foot-ul list-unstyled">
+                                <li class="foot-li"><a href="" class="text-decoration-none">Who We Are</a></li>
+                                <li class="foot-li"><a href="" class="text-decoration-none">Contact Us</a></li>
+                                <li class="foot-li"><a href="" class="text-decoration-none">Careers</a></li>
+                                <li class="foot-li"><a href="" class="text-decoration-none">Flagship Stores</a></li>
+                            </ul>
+                        </div>
+                        <div class="col text-white text-end">
+                            <span class="social"><a href="" class="text-decoration-none"><i
+                                        class="fa-brands fa-facebook-f"></i></a></span>
+                            <span class="social"><a href="" class="text-decoration-none"><i
+                                        class="fa-brands fa-twitter"></i></a></span>
+                            <span class="social"><a href="" class="text-decoration-none"><i
+                                        class="fa-brands fa-youtube"></i></a></span>
+                            <span class="social"><a href="" class="text-decoration-none"><i
+                                        class="fa-brands fa-vimeo-v"></i></a></span>
+                            <span class="social"><a href="" class="text-decoration-none"><i
+                                        class="fa-brands fa-instagram"></i></a></span>
+                        </div>
+                    </div>
+                    <div class="row border-top mt-2">
+                        <div class="col-8">
+                            <ul class="list-inline mt-3">
+                                <span class="copyright cstm me-3">Copyright &copy; 2022 Shri All Rights Reserved</span>
+                                <li class="list-inline-item ms-1"><a href="" class="text-decoration-none">Privacy
+                                        Policy</a>
+                                </li>
+                                <li class="list-inline-item"><a href="" class="text-decoration-none">Cookie
+                                        Prefernces</a>
+                                </li>
+                                <li class="list-inline-item"><a href="" class="text-decoration-none">Terms of Use</a>
+                                </li>
+                                <li class="list-inline-item"><a href="" class="text-decoration-none">Site Map</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col text-white text-end mt-3">
+                            <span>
+                                <h6 class="d-inline-block ms-2 cstm">Feedback on web experience?<a href=""
+                                        class=" clr-foot text-decoration-none ms-2">Click Here</a></h6>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
